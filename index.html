@@ -88,9 +88,10 @@
 
       <div class="spacer"></div>
 
-      <div class="row">
-        <button class="primary" id="checkBtn">判定</button>
-        <button id="hintBtn">ヒントを表示</button>
+            <div class="row">
+        <button class="primary" id="checkBtn">??</button>
+        <button id="hintBtn">??????</button>
+        <button id="exampleBtn">?????</button>
       </div>
 
       <div class="spacer"></div>
@@ -147,6 +148,7 @@ const ui = {
   jpText: document.getElementById("jpText"),
   posPill: document.getElementById("posPill"),
   hintText: document.getElementById("hintText"),
+  exampleText: document.getElementById("exampleText"),
   answerInput: document.getElementById("answerInput"),
   inputWrap: document.getElementById("inputWrap"),
   ghostText: document.getElementById("ghostText"),
@@ -171,7 +173,8 @@ const WRONG_WEIGHT = 3;
 let revealMode = false;     // hintBtnが「答えを表示」状態か
 let traceMode = false;      // なぞりモード中か
 let traceTarget = "";       // 正解（表示用）
-let traceTyped = "";        // いまなぞった文字列
+let traceTyped = "";
+let exampleVisible = false;        // いまなぞった文字列
 
 function normalizeEn(s) {
   return String(s)
@@ -254,6 +257,7 @@ function setExampleVisible(visible) {
   ui.exampleText.classList.toggle("hidden", !visible);
   ui.exampleBtn.textContent = visible ? "?????" : "?????";
 }
+
 
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, m => ({
