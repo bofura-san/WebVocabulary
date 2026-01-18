@@ -13,6 +13,7 @@
     .spacer { height: 12px; }
     .big { font-size: 22px; font-weight: 700; line-height: 1.3; }
     .hint { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 18px; }
+    .example { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 18px; color: #333; }
 
     .inputWrap { position: relative; }
     input[type="text"] {
@@ -73,6 +74,9 @@
       <div class="spacer"></div>
 
       <div class="hint" id="hintText"></div>
+      <div class="spacer"></div>
+
+      <div class="example" id="exampleText"></div>
       <div class="spacer"></div>
 
       <div class="inputWrap" id="inputWrap">
@@ -187,6 +191,20 @@ function updatePills() {
   ui.scorePill.textContent = `✅${ok} / ❌${ng}`;
 }
 
+function escapeRegExp(s) {
+  return String(s).replace(/[.*+?^${}()|[\]\]/g, "\$&");
+}
+
+function maskExample(exampleRaw, answerRaw) {
+  const example = String(exampleRaw || "").trim();
+  const answer = String(answerRaw || "").trim();
+  if (!example || !answer) return example;
+
+  const pattern = new RegExp(escapeRegExp(answer), "ig");
+  const replaced = example.replace(pattern, (m) => m.replace(/[A-Za-z]/g, "_"));
+  return replaced;
+}
+
 function makeHint(answerRaw) {
   const a = String(answerRaw).trim();
   if (a.toLowerCase().startsWith("to ")) {
@@ -211,6 +229,7 @@ function resetHintAndTraceUI() {
   traceTyped = "";
   ui.hintBtn.textContent = "ヒントを表示";
   setHint("");
+  ui.exampleText.textContent = "";
   setGhost(""); // ghost消す
   ui.checkBtn.disabled = false;
   ui.answerInput.value = "";
@@ -262,6 +281,7 @@ function nextQuestion() {
   idx = pickNextIndex();
   current = items[idx];
   ui.jpText.textContent = current.jp;
+  ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
   ui.posPill.textContent = `品詞: ${current.pos || "-"}`;
   resetHintAndTraceUI();
   setStatus("");
