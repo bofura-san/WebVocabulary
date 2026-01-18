@@ -102,6 +102,8 @@
 
 <script>
 /** ---------- CSV Loader ---------- **/
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow/export?format=csv&gid=743650624";
+
 async function loadCSV(url) {
   const res = await fetch(url, { cache: "no-store" });
   if (!res.ok) throw new Error("CSV読み込み失敗: " + res.status);
@@ -395,7 +397,7 @@ function onHintButton() {
 /** ---------- Boot ---------- **/
 (async function boot() {
   try {
-    const rows = await loadCSV("./words.csv");
+    const rows = await loadCSV(SHEET_CSV_URL);
     const startIndex = (rows.length > 0 && !/^\d+$/.test(String(rows[0][0]).trim())) ? 1 : 0;
 
     items = rows.slice(startIndex).map(r => ({
