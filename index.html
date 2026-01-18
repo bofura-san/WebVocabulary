@@ -13,7 +13,7 @@
     .spacer { height: 12px; }
     .big { font-size: 22px; font-weight: 700; line-height: 1.3; }
     .hint { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 18px; }
-    .example { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 18px; color: #333; }
+    .example { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 18px; color: #333; white-space: pre-wrap; }
 
     .inputWrap { position: relative; }
     input[type="text"] {
@@ -421,13 +421,23 @@ function onHintButton() {
     const rows = await loadCSV(SHEET_CSV_URL);
     const startIndex = (rows.length > 0 && !/^\d+$/.test(String(rows[0][0]).trim())) ? 1 : 0;
 
-    items = rows.slice(startIndex).map(r => ({
-      id: String(r[0] ?? "").trim(),
-      en: String(r[1] ?? "").trim(),
-      jp: String(r[2] ?? "").trim(),
-      pos: String(r[3] ?? "").trim(),
-      wrongCount: 0,
-    })).filter(x => x.en && x.jp);
+    items = rows.slice(startIndex).map(r => {
+      let exampleEn = String(r[4] ?? "").trim();
+      let exampleJp = String(r[5] ?? "").trim();
+      if (!exampleEn && /[A-Za-z]/.test(exampleJp)) {
+        exampleEn = exampleJp;
+        exampleJp = String(r[6] ?? "").trim();
+      }
+      return {
+        id: String(r[0] ?? "").trim(),
+        en: String(r[1] ?? "").trim(),
+        jp: String(r[2] ?? "").trim(),
+        pos: String(r[3] ?? "").trim(),
+        exampleEn,
+        exampleJp,
+        wrongCount: 0,
+      };
+    }).filter(x => x.en && x.jp);
     shuffleInPlace(items);
 
     if (items.length === 0) throw new Error("有効な単語行が0件でした（CSV列を確認してください）");
