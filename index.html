@@ -192,7 +192,7 @@ function updatePills() {
 }
 
 function escapeRegExp(s) {
-  return String(s).replace(/[.*+?^${}()|[\]\]/g, "\$&");
+  return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function maskExample(exampleRaw, answerRaw) {
