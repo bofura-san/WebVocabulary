@@ -229,7 +229,6 @@ function resetHintAndTraceUI() {
   traceTyped = "";
   ui.hintBtn.textContent = "ヒントを表示";
   setHint("");
-  ui.exampleText.textContent = "";
   setGhost(""); // ghost消す
   ui.checkBtn.disabled = false;
   ui.answerInput.value = "";
@@ -281,9 +280,11 @@ function nextQuestion() {
   idx = pickNextIndex();
   current = items[idx];
   ui.jpText.textContent = current.jp;
-  ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
   ui.posPill.textContent = `品詞: ${current.pos || "-"}`;
   resetHintAndTraceUI();
+  if (ui.exampleText) {
+    ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
+  }
   setStatus("");
   setDebug("");
   updatePills();
@@ -435,6 +436,9 @@ function onHintButton() {
     asked = 1;
     current = items[idx];
     ui.jpText.textContent = current.jp;
+    if (ui.exampleText) {
+      ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
+    }
     ui.posPill.textContent = `品詞: ${current.pos || "-"}`;
     updatePills();
     ui.answerInput.focus();
