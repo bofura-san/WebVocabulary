@@ -154,8 +154,10 @@ const ui = {
 let items = [];
 let current = null;
 let idx = 0;
+let asked = 0;
 let ok = 0, ng = 0;
 const NEXT_DELAY_MS = 1000;
+const WRONG_WEIGHT = 3;
 
 // hint/reveal state
 let revealMode = false;     // hintBtnが「答えを表示」状態か
@@ -179,7 +181,7 @@ function setHint(text) { ui.hintText.textContent = text || ""; }
 function setDebug(text) { ui.debugText.textContent = text || ""; }
 
 function updatePills() {
-  ui.counterPill.textContent = `${idx + 1} / ${items.length}`;
+  ui.counterPill.textContent = `${asked} / ${items.length}`;
   ui.scorePill.textContent = `✅${ok} / ❌${ng}`;
 }
 
@@ -237,8 +239,25 @@ function shuffleInPlace(list) {
   }
 }
 
+function getWeight(item) {
+  return 1 + (item.wrongCount || 0) * WRONG_WEIGHT;
+}
+
+function pickNextIndex() {
+  if (items.length <= 1) return 0;
+  let total = 0;
+  for (const item of items) total += getWeight(item);
+  let r = Math.random() * total;
+  for (let i = 0; i < items.length; i++) {
+    r -= getWeight(items[i]);
+    if (r <= 0) return i;
+  }
+  return 0;
+}
+
 function nextQuestion() {
-  idx = (idx + 1) % items.length;
+  asked++;
+  idx = pickNextIndex();
   current = items[idx];
   ui.jpText.textContent = current.jp;
   ui.posPill.textContent = `品詞: ${current.pos || "-"}`;
@@ -251,6 +270,7 @@ function nextQuestion() {
 
 function markWrong(reason) {
   ng++;
+  current.wrongCount = (current.wrongCount || 0) + 1;
   setStatus(reason || "ミス", "ng");
   updatePills();
 }
@@ -383,12 +403,14 @@ function onHintButton() {
       en: String(r[1] ?? "").trim(),
       jp: String(r[2] ?? "").trim(),
       pos: String(r[3] ?? "").trim(),
+      wrongCount: 0,
     })).filter(x => x.en && x.jp);
     shuffleInPlace(items);
 
     if (items.length === 0) throw new Error("有効な単語行が0件でした（CSV列を確認してください）");
 
     idx = 0;
+    asked = 1;
     current = items[idx];
     ui.jpText.textContent = current.jp;
     ui.posPill.textContent = `品詞: ${current.pos || "-"}`;
