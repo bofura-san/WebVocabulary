@@ -86,10 +86,10 @@
 
       <div class="spacer"></div>
 
-            <div class="row">
-        <button class="primary" id="checkBtn">??</button>
-        <button id="hintBtn">??????</button>
-        <button id="exampleBtn">?????</button>
+      <div class="row">
+        <button class="primary" id="checkBtn">判定</button>
+        <button id="hintBtn">ヒントを表示</button>
+        <button id="exampleBtn">例文を表示</button>
       </div>
 
       <div class="spacer"></div>
@@ -173,7 +173,7 @@ const NEXT_DELAY_MS = 1000;
 const WRONG_WEIGHT = 3;
 
 // hint/reveal state
-let revealMode = false;     // hintBtnが「答えを表示」状態か
+let revealMode = false;     // hintBtnが「\u7b54\u3048\u3092\u8868\u793a」状態か
 let traceMode = false;      // なぞりモード中か
 let traceTarget = "";       // 正解（表示用）
 let traceTyped = "";
@@ -258,7 +258,7 @@ function setExampleVisible(visible) {
   exampleVisible = visible;
   if (!ui.exampleText) return;
   ui.exampleText.classList.toggle("hidden", !visible);
-  ui.exampleBtn.textContent = visible ? "?????" : "?????";
+  ui.exampleBtn.textContent = visible ? "例文を隠す" : "例文を表示";
 }
 
 
@@ -419,13 +419,13 @@ function onKeyDownFallback(ev) {
 /** ---- Hint / Reveal button ---- **/
 function onHintButton() {
   if (!revealMode) {
-    // 1回目：ヒント表示 → ボタンが「答えを表示」に変化
+    // 1回目：ヒント表示 → ボタンが「\u7b54\u3048\u3092\u8868\u793a」に変化
     revealMode = true;
     ui.hintBtn.textContent = "答えを表示";
     setHint(makeHint(current.en));
     setStatus("", "");
   } else {
-    // 2回目：「答えを表示」→ なぞりモードへ（ミス扱い）
+    // 2回目：「\u7b54\u3048\u3092\u8868\u793a」→ なぞりモードへ（ミス扱い）
     markWrong("答えを見ました（ミス扱い）");
     enterTraceMode();
   }
