@@ -223,6 +223,9 @@ function setView(mode) {
 
 function setActiveSheet(gid, name) {
   activeGid = String(gid || DEFAULT_GID);
+  if (activeGid === LIST_GID) {
+    activeGid = DEFAULT_GID;
+  }
   activeName = String(name || "-");
   localStorage.setItem(STORAGE_GID_KEY, activeGid);
   localStorage.setItem(STORAGE_NAME_KEY, activeName);
@@ -230,8 +233,12 @@ function setActiveSheet(gid, name) {
 }
 
 function loadActiveSheetFromStorage() {
-  const gid = localStorage.getItem(STORAGE_GID_KEY) || DEFAULT_GID;
-  const name = localStorage.getItem(STORAGE_NAME_KEY) || "-";
+  let gid = localStorage.getItem(STORAGE_GID_KEY) || DEFAULT_GID;
+  let name = localStorage.getItem(STORAGE_NAME_KEY) || "-";
+  if (gid === LIST_GID) {
+    gid = DEFAULT_GID;
+    name = "-";
+  }
   setActiveSheet(gid, name);
 }
 
@@ -264,26 +271,34 @@ function renderSheetList(list) {
 }
 
 async function loadItemsForActiveSheet() {
-  const rows = await loadCSV(buildSheetCsvUrl(activeGid));
-  const startIndex = (rows.length > 0 && !/^\d+$/.test(String(rows[0][0]).trim())) ? 1 : 0;
+  const loadForGid = async (gid) => {
+    const rows = await loadCSV(buildSheetCsvUrl(gid));
+    const startIndex = (rows.length > 0 && !/^\d+$/.test(String(rows[0][0]).trim())) ? 1 : 0;
+    const list = rows.slice(startIndex).map(r => {
+      let exampleEn = String(r[4] ?? "").trim();
+      let exampleJp = String(r[5] ?? "").trim();
+      if (!exampleEn && /[A-Za-z]/.test(exampleJp)) {
+        exampleEn = exampleJp;
+        exampleJp = String(r[6] ?? "").trim();
+      }
+      return {
+        id: String(r[0] ?? "").trim(),
+        en: String(r[1] ?? "").trim(),
+        jp: String(r[2] ?? "").trim(),
+        pos: String(r[3] ?? "").trim(),
+        exampleEn,
+        exampleJp,
+        wrongCount: 0,
+      };
+    }).filter(x => x.en && x.jp);
+    return list;
+  };
 
-  items = rows.slice(startIndex).map(r => {
-    let exampleEn = String(r[4] ?? "").trim();
-    let exampleJp = String(r[5] ?? "").trim();
-    if (!exampleEn && /[A-Za-z]/.test(exampleJp)) {
-      exampleEn = exampleJp;
-      exampleJp = String(r[6] ?? "").trim();
-    }
-    return {
-      id: String(r[0] ?? "").trim(),
-      en: String(r[1] ?? "").trim(),
-      jp: String(r[2] ?? "").trim(),
-      pos: String(r[3] ?? "").trim(),
-      exampleEn,
-      exampleJp,
-      wrongCount: 0,
-    };
-  }).filter(x => x.en && x.jp);
+  items = await loadForGid(activeGid);
+  if (items.length === 0 && activeGid !== DEFAULT_GID) {
+    setActiveSheet(DEFAULT_GID, activeName);
+    items = await loadForGid(activeGid);
+  }
   shuffleInPlace(items);
 
   if (items.length === 0) throw new Error("有効な単語行が0件でした（CSV列を確認してください）");
@@ -297,7 +312,7 @@ async function loadItemsForActiveSheet() {
   if (ui.exampleText) {
     ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
   }
-  ui.posPill.textContent = `??: ${current.pos || "-"}`;
+  ui.posPill.textContent = `品詞: ${current.pos || "-"}`;
   setExampleVisible(false);
   updatePills();
   ui.answerInput.focus();
@@ -572,9 +587,10 @@ function onHintButton() {
   if (ui.switchSheetBtn) {
     ui.switchSheetBtn.addEventListener("click", async () => {
       try {
+        setView("list");
+        setStatus("");
         const list = await loadSheetList();
         renderSheetList(list);
-        setView("list");
       } catch (e) {
         setStatus(String(e), "ng");
       }
