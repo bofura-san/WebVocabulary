@@ -192,11 +192,18 @@ const ui = {
   statusText: document.getElementById("statusText"),
   debugText: document.getElementById("debugText"),
   hintBtn: document.getElementById("hintBtn"),
+  switchSheetBtn: document.getElementById("switchSheetBtn"),
+  sheetNamePill: document.getElementById("sheetNamePill"),
+  sheetListView: document.getElementById("sheetListView"),
+  sheetList: document.getElementById("sheetList"),
+  closeSheetListBtn: document.getElementById("closeSheetListBtn"),
+  quizView: document.getElementById("quizView"),
   exampleBtn: document.getElementById("exampleBtn"),
   checkBtn: document.getElementById("checkBtn"),
   counterPill: document.getElementById("counterPill"),
   scorePill: document.getElementById("scorePill"),
 };
+window.ui = ui;
 
 let items = [];
 let current = null;
