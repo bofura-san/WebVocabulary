@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Typing Vocab MVP</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    body { margin: 0; padding: 16px; }
+    .wrap { max-width: 720px; margin: 0 auto; }
+    .card { border: 1px solid #ddd; border-radius: 16px; padding: 16px; }
+    .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .spacer { height: 12px; }
+    .big { font-size: 22px; font-weight: 700; line-height: 1.3; }
+    .titleRow { display: flex; gap: 12px; align-items: baseline; }
+    .statusInline { font-weight: 700; }
+    .sheetRow { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+    .sheetList { border: 1px solid #ddd; border-radius: 16px; padding: 16px; }
+    .sheetItems { display: grid; gap: 8px; }
+    .sheetItemBtn { text-align: left; }
+
+    .hint { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 18px; }
+    .example { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 18px; color: #333; white-space: pre-wrap; }
+    .hidden { display: none; }
+
+    .inputWrap { position: relative; }
+    input[type="text"] {
+      width: 100%;
+      font-size: 18px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      background: transparent;
+      position: relative;
+      z-index: 2;
+    }
+    .ghost {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      color: #999;
+      white-space: pre;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .ghost .typed { color: transparent; } /* typed部分は透明（入力欄で見える） */
+    .ghost .rest { color: #aaa; }
+
+    button { font-size: 16px; padding: 10px 14px; border-radius: 12px; border: 1px solid #bbb; background: #fff; }
+    button.primary { border-color: #000; }
+    button:disabled { opacity: 0.5; }
+    .status { min-height: 24px; font-weight: 600; }
+    .ok { color: #0a7; }
+    .ng { color: #c33; }
+    .muted { color: #666; font-size: 13px; }
+    .pill { border: 1px solid #ddd; padding: 4px 10px; border-radius: 999px; font-size: 13px; color: #444; }
+    .shake { animation: shake 120ms linear 1; }
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-2px); }
+      50% { transform: translateX(2px); }
+      75% { transform: translateX(-2px); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="sheetRow">
+      <button id="switchSheetBtn">&#x30B7;&#x30FC;&#x30C8;&#x306E;&#x5207;&#x308A;&#x66FF;&#x3048;</button>
+      <div class="pill" id="sheetNamePill">&#x30BB;&#x30C3;&#x30C8;: -</div>
+    </div>
+
+    <div class="sheetList hidden" id="sheetListView">
+      <div class="row">
+        <div class="big">&#x30B7;&#x30FC;&#x30C8;&#x4E00;&#x89A7;</div>
+        <button id="closeSheetListBtn">&#x623B;&#x308B;</button>
+      </div>
+      <div class="spacer"></div>
+      <div class="sheetItems" id="sheetList"></div>
+    </div>
+
+    <div id="quizView">
+      <div class="card">
+      <div class="row">
+        <div class="pill" id="posPill">品詞: -</div>
+        <div class="pill" id="counterPill">0 / 0</div>
+        <div class="pill" id="scorePill">✅0 / ❌0</div>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="titleRow">
+        <div class="big" id="jpText">読み込み中...</div>
+        <div class="status statusInline" id="statusText"></div>
+      </div>
+      <div class="spacer"></div>
+
+      <div class="hint" id="hintText"></div>
+      <div class="spacer"></div>
+
+
+      <div class="inputWrap" id="inputWrap">
+        <div class="ghost" id="ghostText" aria-hidden="true"></div>
+        <input id="answerInput" type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false"
+               placeholder="英語を入力してEnter（または「判定」）" />
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="row">
+        <button class="primary" id="checkBtn">判定</button>
+        <button id="hintBtn">ヒントを表示</button>
+        <button id="exampleBtn">例文を表示</button>
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="example hidden" id="exampleText"></div>
+      <div class="spacer"></div>
+
+      <div class="spacer"></div>
+
+      <div class="muted" id="debugText"></div>
+    </div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="muted">
+      使い方：通常はそのまま入力して判定。ヒント→答えの順に押すと「なぞりモード」に入り、答えをタイピングでなぞると即次へ（ミス扱い）。
+    </div>
+  </div>
+
+<script>
+/** ---------- CSV Loader ---------- **/
+const SHEET_ID = "1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow";
+const DEFAULT_GID = "743650624";
+const LIST_GID = "1137954113";
+const STORAGE_GID_KEY = "wv.sheet.gid";
+const STORAGE_NAME_KEY = "wv.sheet.name";
+
+function buildSheetCsvUrl(gid) {
+  return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
+}
+
+
+async function loadCSV(url) {
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error("CSV読み込み失敗 " + res.status);
+  const text = await res.text();
+  return parseCSV(text);
+}
+
+function parseCSV(text) {
+  const rows = [];
+  let row = [];
+  let cell = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    const next = text[i + 1];
+
+    if (inQuotes) {
+      if (ch === '"' && next === '"') { cell += '"'; i++; }
+      else if (ch === '"') { inQuotes = false; }
+      else { cell += ch; }
+    } else {
+      if (ch === '"') inQuotes = true;
+      else if (ch === ',') { row.push(cell); cell = ""; }
+      else if (ch === '\n') { row.push(cell); rows.push(row); row = []; cell = ""; }
+      else if (ch === '\r') { /* ignore */ }
+      else { cell += ch; }
+    }
+  }
+  if (cell.length > 0 || row.length > 0) { row.push(cell); rows.push(row); }
+  return rows.filter(r => r.some(c => String(c).trim() !== ""));
+}
+
+/** ---------- Quiz Logic ---------- **/
+const ui = {
+  jpText: document.getElementById("jpText"),
+  posPill: document.getElementById("posPill"),
+  hintText: document.getElementById("hintText"),
+  exampleText: document.getElementById("exampleText"),
+  answerInput: document.getElementById("answerInput"),
+  inputWrap: document.getElementById("inputWrap"),
+  ghostText: document.getElementById("ghostText"),
+  statusText: document.getElementById("statusText"),
+  debugText: document.getElementById("debugText"),
+  hintBtn: document.getElementById("hintBtn"),
+  exampleBtn: document.getElementById("exampleBtn"),
+  checkBtn: document.getElementById("checkBtn"),
+  counterPill: document.getElementById("counterPill"),
+  scorePill: document.getElementById("scorePill"),
+};
+
+let items = [];
+let current = null;
+let idx = 0;
+let asked = 0;
+let ok = 0, ng = 0;
+const NEXT_DELAY_MS = 1000;
+const WRONG_WEIGHT = 3;
+let activeGid = DEFAULT_GID;
+let activeName = "-";
+
+// hint/reveal state
+let revealMode = false;     // hintBtnが「\u7b54\u3048\u3092\u8868\u793a」状態か
+let traceMode = false;      // なぞりモード中か
+let traceTarget = "";       // 正解（表示用）
+let traceTyped = "";
+let exampleVisible = false;        // いまなぞった文字列
+
+function normalizeGid(value) {
+  const m = String(value || "").match(/\d+/);
+  return m ? m[0] : "";
+}
+
+function setView(mode) {
+  const showList = mode === "list";
+  if (ui.sheetListView) ui.sheetListView.classList.toggle("hidden", !showList);
+  if (ui.quizView) ui.quizView.classList.toggle("hidden", showList);
+}
+
+function setActiveSheet(gid, name) {
+  activeGid = normalizeGid(gid || DEFAULT_GID);
+  if (activeGid === LIST_GID) {
+    activeGid = DEFAULT_GID;
+  }
+  activeName = String(name || "-");
+  localStorage.setItem(STORAGE_GID_KEY, activeGid);
+  localStorage.setItem(STORAGE_NAME_KEY, activeName);
+  if (ui.sheetNamePill) ui.sheetNamePill.textContent = `セット: ${activeName}`;
+}
+
+function loadActiveSheetFromStorage() {
+  let gid = normalizeGid(localStorage.getItem(STORAGE_GID_KEY) || DEFAULT_GID);
+  let name = localStorage.getItem(STORAGE_NAME_KEY) || "-";
+  if (gid === LIST_GID) {
+    gid = DEFAULT_GID;
+    name = "-";
+  }
+  setActiveSheet(gid, name);
+}
+
+async function loadSheetList() {
+  if (!LIST_GID || LIST_GID === "PUT_LIST_GID_HERE") {
+    throw new Error("LIST_GID is not set");
+  }
+  const rows = await loadCSV(buildSheetCsvUrl(LIST_GID));
+  setDebug(`list gid=${LIST_GID} rows=${rows.length} cols=${rows[0] ? rows[0].length : 0}`);
+  const start = (rows.length > 0 && !/^\d+$/.test(String(rows[0][1]).trim())) ? 1 : 0;
+  return rows.slice(start).map(r => ({
+    name: String(r[0] ?? "").trim(),
+    gid: normalizeGid(r[1] ?? ""),
+  })).filter(x => x.name && x.gid);
+}
+
+function renderSheetList(list) {
+  if (!ui.sheetList) return;
+  ui.sheetList.innerHTML = "";
+  for (const item of list) {
+    const btn = document.createElement("button");
+    btn.className = "sheetItemBtn";
+    btn.textContent = item.name;
+    btn.addEventListener("click", () => {
+      setActiveSheet(item.gid, item.name);
+      loadItemsForActiveSheet();
+      setView("quiz");
+    });
+    ui.sheetList.appendChild(btn);
+  }
+}
+
+async function loadItemsForActiveSheet() {
+  const loadForGid = async (gid) => {
+    const rows = await loadCSV(buildSheetCsvUrl(gid));
+    setDebug(`gid=${gid} rows=${rows.length} cols=${rows[0] ? rows[0].length : 0}`);
+    const startIndex = (rows.length > 0 && !/^\d+$/.test(String(rows[0][0]).trim())) ? 1 : 0;
+    const list = rows.slice(startIndex).map(r => {
+      let exampleEn = String(r[4] ?? "").trim();
+      let exampleJp = String(r[5] ?? "").trim();
+      if (!exampleEn && /[A-Za-z]/.test(exampleJp)) {
+        exampleEn = exampleJp;
+        exampleJp = String(r[6] ?? "").trim();
+      }
+      return {
+        id: String(r[0] ?? "").trim(),
+        en: String(r[1] ?? "").trim(),
+        jp: String(r[2] ?? "").trim(),
+        pos: String(r[3] ?? "").trim(),
+        exampleEn,
+        exampleJp,
+        wrongCount: 0,
+      };
+    }).filter(x => x.en && x.jp);
+    return list;
+  };
+
+  if (!activeGid) {
+    setActiveSheet(DEFAULT_GID, activeName);
+  }
+  items = await loadForGid(activeGid || DEFAULT_GID);
+  if (items.length === 0 && activeGid !== DEFAULT_GID) {
+    setActiveSheet(DEFAULT_GID, activeName);
+    if (!activeGid) {
+    setActiveSheet(DEFAULT_GID, activeName);
+  }
+  items = await loadForGid(activeGid || DEFAULT_GID);
+  }
+  shuffleInPlace(items);
+
+  if (items.length === 0) throw new Error("有効な単語行が0件でした（CSV列を確認してください）");
+
+  idx = 0;
+  asked = 1;
+  ok = 0;
+  ng = 0;
+  current = items[idx];
+  ui.jpText.textContent = current.jp;
+  if (ui.exampleText) {
+    ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
+  }
+  ui.posPill.textContent = `品詞: ${current.pos || "-"}`;
+  setExampleVisible(false);
+  updatePills();
+  ui.answerInput.focus();
+}
+
+function normalizeEn(s) {
+  return String(s)
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, " ")
+    .replace(/[’‘]/g, "'");
+}
+
+function setStatus(msg, cls) {
+  ui.statusText.className = "status " + (cls || "");
+  ui.statusText.textContent = msg || "";
+}
+function setHint(text) { ui.hintText.textContent = text || ""; }
+function setDebug(text) { ui.debugText.textContent = text || ""; }
+
+function updatePills() {
+  ui.counterPill.textContent = `${asked} / ${items.length}`;
+  ui.scorePill.textContent = `✅${ok} / ❌${ng}`;
+}
+
+function escapeRegExp(s) {
+  return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function maskExample(exampleRaw, answerRaw) {
+  const example = String(exampleRaw || "").trim();
+  const answer = String(answerRaw || "").trim();
+  if (!example || !answer) return example;
+
+  const pattern = new RegExp(escapeRegExp(answer), "ig");
+  const replaced = example.replace(pattern, (m) => m.replace(/[A-Za-z]/g, "_"));
+  return replaced;
+}
+
+function makeHint(answerRaw) {
+  const a = String(answerRaw).trim();
+  if (a.toLowerCase().startsWith("to ")) {
+    const rest = a.slice(3);
+    if (rest.length === 0) return "to _";
+    const firstChar = rest[0];
+    let masked = "";
+    for (let i = 1; i < rest.length; i++) masked += (rest[i] === " ") ? " " : "_";
+    return "to " + firstChar + masked;
+  }
+  if (!a) return "";
+  const first = a[0];
+  let masked = "";
+  for (let i = 1; i < a.length; i++) masked += (a[i] === " ") ? " " : "_";
+  return first + masked;
+}
+
+function resetHintAndTraceUI() {
+  revealMode = false;
+  traceMode = false;
+  traceTarget = "";
+  traceTyped = "";
+  ui.hintBtn.textContent = "ヒントを表示";
+  setHint("");
+  setGhost(""); // ghost消す
+  ui.checkBtn.disabled = false;
+  ui.answerInput.value = "";
+  ui.answerInput.placeholder = "英語を入力してEnter（または「判定」）";
+}
+
+function setGhost(target) {
+  if (!target) {
+    ui.ghostText.innerHTML = "";
+    return;
+  }
+  // typedは透明、restだけ灰色で見せる
+  const typed = escapeHtml(traceTyped);
+  const rest = escapeHtml(target.slice(traceTyped.length));
+  ui.ghostText.innerHTML = `<span class="typed">${typed}</span><span class="rest">${rest}</span>`;
+}
+
+function setExampleVisible(visible) {
+  exampleVisible = visible;
+  if (!ui.exampleText) return;
+  ui.exampleText.classList.toggle("hidden", !visible);
+  ui.exampleBtn.textContent = visible ? "例文を隠す" : "例文を表示";
+}
+
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, m => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[m]));
+}
+
+function shuffleInPlace(list) {
+  for (let i = list.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [list[i], list[j]] = [list[j], list[i]];
+  }
+}
+
+function getWeight(item) {
+  return 1 + (item.wrongCount || 0) * WRONG_WEIGHT;
+}
+
+function pickNextIndex() {
+  if (items.length <= 1) return 0;
+  let total = 0;
+  for (const item of items) total += getWeight(item);
+  let r = Math.random() * total;
+  for (let i = 0; i < items.length; i++) {
+    r -= getWeight(items[i]);
+    if (r <= 0) return i;
+  }
+  return 0;
+}
+
+function nextQuestion() {
+  asked++;
+  idx = pickNextIndex();
+  current = items[idx];
+  ui.jpText.textContent = current.jp;
+  ui.posPill.textContent = `品詞: ${current.pos || "-"}`;
+  resetHintAndTraceUI();
+  if (ui.exampleText) {
+    ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
+  }
+  setStatus("");
+  setDebug("");
+  updatePills();
+  ui.answerInput.focus();
+}
+
+function markWrong(reason) {
+  ng++;
+  current.wrongCount = (current.wrongCount || 0) + 1;
+  setStatus(reason || "ミス", "ng");
+  updatePills();
+}
+function markCorrect() {
+  ok++;
+  setStatus("正解！", "ok");
+  updatePills();
+}
+
+function checkAnswer() {
+  if (traceMode) return; // なぞり中は判定しない
+  const user = normalizeEn(ui.answerInput.value);
+  const ans = normalizeEn(current.en);
+  if (!user) { setStatus("未入力です", "ng"); return; }
+
+  if (user === ans) {
+    markCorrect();
+    setTimeout(nextQuestion, NEXT_DELAY_MS); // テンポ優先：短く
+  } else {
+    setStatus("違います（もう一回）", "ng");
+    // 将来：to bear vs bear の「惜しい」判定など
+  }
+}
+
+/** ---- Trace Mode (なぞり) ---- **/
+function enterTraceMode() {
+  traceMode = true;
+  ui.checkBtn.disabled = true;
+  ui.answerInput.value = "";
+  ui.answerInput.placeholder = "";
+  traceTarget = String(current.en).trim();
+  traceTyped = "";
+  setGhost(traceTarget);
+  setStatus("答えをなぞってください（ミス扱い）", "ng");
+  setDebug(""); // ここは静かに
+  ui.answerInput.focus();
+}
+
+function flashWrongKey() {
+  ui.inputWrap.classList.remove("shake");
+  void ui.inputWrap.offsetWidth;
+  ui.inputWrap.classList.add("shake");
+}
+
+// iOS含め安定させるため beforeinput を優先で使う
+function onBeforeInput(ev) {
+  if (!traceMode) return;
+
+  // ペーストなどを防ぐ
+  const t = ev.inputType || "";
+  if (t.startsWith("delete") || t === "insertFromPaste" || t === "insertFromDrop") {
+    ev.preventDefault();
+    return;
+  }
+
+  const data = ev.data;
+  if (typeof data !== "string" || data.length === 0) {
+    ev.preventDefault();
+    return;
+  }
+
+  // 1文字ずつ処理（スマホで複数入るケースに備える）
+  let remaining = data;
+  let newTyped = traceTyped;
+
+  for (const ch of remaining) {
+    const expected = traceTarget[newTyped.length];
+    if (expected == null) break;
+
+    // 正規化は「なぞり」ではしない（そのまま合わせる）
+    if (ch === expected) {
+      newTyped += ch;
+    } else {
+      // 間違い：入力させない
+      flashWrongKey();
+      ev.preventDefault();
+      ui.answerInput.value = newTyped;
+      traceTyped = newTyped;
+      setGhost(traceTarget);
+      return;
+    }
+  }
+
+  // ここまで全部正しい → 反映
+  ev.preventDefault();
+  traceTyped = newTyped;
+  ui.answerInput.value = traceTyped;
+  setGhost(traceTarget);
+
+  if (traceTyped.length >= traceTarget.length) {
+    // 完走したら即次へ
+    setStatus("OK（次へ）", "ok");
+    setTimeout(nextQuestion, NEXT_DELAY_MS);
+  }
+}
+
+function onKeyDownFallback(ev) {
+  // beforeinput非対応環境の最低限フォールバック
+  if (!traceMode) return;
+  // EnterやBackspaceは無効化
+  if (ev.key === "Enter" || ev.key === "Backspace") {
+    ev.preventDefault();
+    return;
+  }
+}
+
+/** ---- Hint / Reveal button ---- **/
+function onHintButton() {
+  if (!revealMode) {
+    // 1回目：ヒント表示 → ボタンが「\u7b54\u3048\u3092\u8868\u793a」に変化
+    revealMode = true;
+    ui.hintBtn.textContent = "答えを表示";
+    setHint(makeHint(current.en));
+    setStatus("", "");
+  } else {
+    // 2回目：「\u7b54\u3048\u3092\u8868\u793a」→ なぞりモードへ（ミス扱い）
+    markWrong("答えを見ました（ミス扱い）");
+    enterTraceMode();
+  }
+}
+
+/** ---------- Boot ---------- **/
+(async function boot() {
+  try {
+    loadActiveSheetFromStorage();
+    await loadItemsForActiveSheet();
+  } catch (e) {
+
+    ui.jpText.textContent = "読み込みに失敗しました";
+    setStatus(String(e), "ng");
+  }
+
+  ui.checkBtn.addEventListener("click", checkAnswer);
+  ui.hintBtn.addEventListener("click", onHintButton);
+
+  if (ui.switchSheetBtn) {
+    ui.switchSheetBtn.addEventListener("click", async () => {
+      try {
+        setView("list");
+        setStatus("");
+        const list = await loadSheetList();
+        renderSheetList(list);
+      } catch (e) {
+        setStatus(String(e), "ng");
+      }
+    });
+  }
+  if (ui.closeSheetListBtn) {
+    ui.closeSheetListBtn.addEventListener("click", () => setView("quiz"));
+  }
+  ui.exampleBtn.addEventListener("click", () => {
+    setExampleVisible(!exampleVisible);
+  });
+
+  ui.answerInput.addEventListener("keydown", (ev) => {
+    if (traceMode) { onKeyDownFallback(ev); return; }
+    if (ev.key === "Enter") checkAnswer();
+  });
+
+  ui.answerInput.addEventListener("beforeinput", onBeforeInput);
+})();
+</script>
+</body>
+</html>
