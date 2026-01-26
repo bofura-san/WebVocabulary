@@ -14,6 +14,11 @@
     .big { font-size: 22px; font-weight: 700; line-height: 1.3; }
     .titleRow { display: flex; gap: 12px; align-items: baseline; }
     .statusInline { font-weight: 700; }
+    .sheetRow { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
+    .sheetList { border: 1px solid #ddd; border-radius: 16px; padding: 16px; }
+    .sheetItems { display: grid; gap: 8px; }
+    .sheetItemBtn { text-align: left; }
+
     .hint { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 18px; }
     .example { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 18px; color: #333; white-space: pre-wrap; }
     .hidden { display: none; }
@@ -64,7 +69,22 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="card">
+    <div class="sheetRow">
+      <button id="switchSheetBtn">&#x30B7;&#x30FC;&#x30C8;&#x306E;&#x5207;&#x308A;&#x66FF;&#x3048;</button>
+      <div class="pill" id="sheetNamePill">&#x30BB;&#x30C3;&#x30C8;: -</div>
+    </div>
+
+    <div class="sheetList hidden" id="sheetListView">
+      <div class="row">
+        <div class="big">&#x30B7;&#x30FC;&#x30C8;&#x4E00;&#x89A7;</div>
+        <button id="closeSheetListBtn">&#x623B;&#x308B;</button>
+      </div>
+      <div class="spacer"></div>
+      <div class="sheetItems" id="sheetList"></div>
+    </div>
+
+    <div id="quizView">
+      <div class="card">
       <div class="row">
         <div class="pill" id="posPill">品詞: -</div>
         <div class="pill" id="counterPill">0 / 0</div>
@@ -106,6 +126,7 @@
 
       <div class="muted" id="debugText"></div>
     </div>
+    </div>
 
     <div class="spacer"></div>
     <div class="muted">
@@ -115,11 +136,20 @@
 
 <script>
 /** ---------- CSV Loader ---------- **/
-const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow/export?format=csv&gid=743650624";
+const SHEET_ID = "1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow";
+const DEFAULT_GID = "743650624";
+const LIST_GID = "PUT_LIST_GID_HERE";
+const STORAGE_GID_KEY = "wv.sheet.gid";
+const STORAGE_NAME_KEY = "wv.sheet.name";
+
+function buildSheetCsvUrl(gid) {
+  return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
+}
+
 
 async function loadCSV(url) {
   const res = await fetch(url, { cache: "no-store" });
-  if (!res.ok) throw new Error("CSV読み込み失敗: " + res.status);
+  if (items.length === 0) throw new Error("有効な単語行が0件でした（CSV列を確認してください）");
   const text = await res.text();
   return parseCSV(text);
 }
@@ -175,6 +205,8 @@ let asked = 0;
 let ok = 0, ng = 0;
 const NEXT_DELAY_MS = 1000;
 const WRONG_WEIGHT = 3;
+let activeGid = DEFAULT_GID;
+let activeName = "-";
 
 // hint/reveal state
 let revealMode = false;     // hintBtnが「\u7b54\u3048\u3092\u8868\u793a」状態か
@@ -182,6 +214,94 @@ let traceMode = false;      // なぞりモード中か
 let traceTarget = "";       // 正解（表示用）
 let traceTyped = "";
 let exampleVisible = false;        // いまなぞった文字列
+
+function setView(mode) {
+  const showList = mode === "list";
+  if (ui.sheetListView) ui.sheetListView.classList.toggle("hidden", !showList);
+  if (ui.quizView) ui.quizView.classList.toggle("hidden", showList);
+}
+
+function setActiveSheet(gid, name) {
+  activeGid = String(gid || DEFAULT_GID);
+  activeName = String(name || "-");
+  localStorage.setItem(STORAGE_GID_KEY, activeGid);
+  localStorage.setItem(STORAGE_NAME_KEY, activeName);
+  if (ui.sheetNamePill) ui.sheetNamePill.textContent = `セット: ${activeName}`;
+}
+
+function loadActiveSheetFromStorage() {
+  const gid = localStorage.getItem(STORAGE_GID_KEY) || DEFAULT_GID;
+  const name = localStorage.getItem(STORAGE_NAME_KEY) || "-";
+  setActiveSheet(gid, name);
+}
+
+async function loadSheetList() {
+  if (!LIST_GID || LIST_GID === "PUT_LIST_GID_HERE") {
+    throw new Error("LIST_GID is not set");
+  }
+  const rows = await loadCSV(buildSheetCsvUrl(LIST_GID));
+  const start = (rows.length > 0 && !/^\d+$/.test(String(rows[0][1]).trim())) ? 1 : 0;
+  return rows.slice(start).map(r => ({
+    name: String(r[0] ?? "").trim(),
+    gid: String(r[1] ?? "").trim(),
+  })).filter(x => x.name && x.gid);
+}
+
+function renderSheetList(list) {
+  if (!ui.sheetList) return;
+  ui.sheetList.innerHTML = "";
+  for (const item of list) {
+    const btn = document.createElement("button");
+    btn.className = "sheetItemBtn";
+    btn.textContent = item.name;
+    btn.addEventListener("click", () => {
+      setActiveSheet(item.gid, item.name);
+      loadItemsForActiveSheet();
+      setView("quiz");
+    });
+    ui.sheetList.appendChild(btn);
+  }
+}
+
+async function loadItemsForActiveSheet() {
+  const rows = await loadCSV(buildSheetCsvUrl(activeGid));
+  const startIndex = (rows.length > 0 && !/^\d+$/.test(String(rows[0][0]).trim())) ? 1 : 0;
+
+  items = rows.slice(startIndex).map(r => {
+    let exampleEn = String(r[4] ?? "").trim();
+    let exampleJp = String(r[5] ?? "").trim();
+    if (!exampleEn && /[A-Za-z]/.test(exampleJp)) {
+      exampleEn = exampleJp;
+      exampleJp = String(r[6] ?? "").trim();
+    }
+    return {
+      id: String(r[0] ?? "").trim(),
+      en: String(r[1] ?? "").trim(),
+      jp: String(r[2] ?? "").trim(),
+      pos: String(r[3] ?? "").trim(),
+      exampleEn,
+      exampleJp,
+      wrongCount: 0,
+    };
+  }).filter(x => x.en && x.jp);
+  shuffleInPlace(items);
+
+  if (items.length === 0) throw new Error("有効な単語行が0件でした（CSV列を確認してください）");
+
+  idx = 0;
+  asked = 1;
+  ok = 0;
+  ng = 0;
+  current = items[idx];
+  ui.jpText.textContent = current.jp;
+  if (ui.exampleText) {
+    ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
+  }
+  ui.posPill.textContent = `??: ${current.pos || "-"}`;
+  setExampleVisible(false);
+  updatePills();
+  ui.answerInput.focus();
+}
 
 function normalizeEn(s) {
   return String(s)
@@ -438,47 +558,31 @@ function onHintButton() {
 /** ---------- Boot ---------- **/
 (async function boot() {
   try {
-    const rows = await loadCSV(SHEET_CSV_URL);
-    const startIndex = (rows.length > 0 && !/^\d+$/.test(String(rows[0][0]).trim())) ? 1 : 0;
-
-    items = rows.slice(startIndex).map(r => {
-      let exampleEn = String(r[4] ?? "").trim();
-      let exampleJp = String(r[5] ?? "").trim();
-      if (!exampleEn && /[A-Za-z]/.test(exampleJp)) {
-        exampleEn = exampleJp;
-        exampleJp = String(r[6] ?? "").trim();
-      }
-      return {
-        id: String(r[0] ?? "").trim(),
-        en: String(r[1] ?? "").trim(),
-        jp: String(r[2] ?? "").trim(),
-        pos: String(r[3] ?? "").trim(),
-        exampleEn,
-        exampleJp,
-        wrongCount: 0,
-      };
-    }).filter(x => x.en && x.jp);
-    shuffleInPlace(items);
-
-    if (items.length === 0) throw new Error("有効な単語行が0件でした（CSV列を確認してください）");
-
-    idx = 0;
-    asked = 1;
-    current = items[idx];
-    ui.jpText.textContent = current.jp;
-    if (ui.exampleText) {
-      ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
-    }
-    ui.posPill.textContent = `品詞: ${current.pos || "-"}`;
-    updatePills();
-    ui.answerInput.focus();
+    loadActiveSheetFromStorage();
+    await loadItemsForActiveSheet();
   } catch (e) {
+
     ui.jpText.textContent = "読み込みに失敗しました";
     setStatus(String(e), "ng");
   }
 
   ui.checkBtn.addEventListener("click", checkAnswer);
   ui.hintBtn.addEventListener("click", onHintButton);
+
+  if (ui.switchSheetBtn) {
+    ui.switchSheetBtn.addEventListener("click", async () => {
+      try {
+        const list = await loadSheetList();
+        renderSheetList(list);
+        setView("list");
+      } catch (e) {
+        setStatus(String(e), "ng");
+      }
+    });
+  }
+  if (ui.closeSheetListBtn) {
+    ui.closeSheetListBtn.addEventListener("click", () => setView("quiz"));
+  }
   ui.exampleBtn.addEventListener("click", () => {
     setExampleVisible(!exampleVisible);
   });
