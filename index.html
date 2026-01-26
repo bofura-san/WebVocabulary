@@ -149,7 +149,7 @@ function buildSheetCsvUrl(gid) {
 
 async function loadCSV(url) {
   const res = await fetch(url, { cache: "no-store" });
-  if (items.length === 0) throw new Error("有効な単語行が0件でした（CSV列を確認してください）");
+  if (!res.ok) throw new Error("CSV読み込み失敗 " + res.status);
   const text = await res.text();
   return parseCSV(text);
 }
