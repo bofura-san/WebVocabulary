@@ -215,6 +215,11 @@ let traceTarget = "";       // 正解（表示用）
 let traceTyped = "";
 let exampleVisible = false;        // いまなぞった文字列
 
+function normalizeGid(value) {
+  const m = String(value || "").match(/\d+/);
+  return m ? m[0] : "";
+}
+
 function setView(mode) {
   const showList = mode === "list";
   if (ui.sheetListView) ui.sheetListView.classList.toggle("hidden", !showList);
@@ -222,7 +227,7 @@ function setView(mode) {
 }
 
 function setActiveSheet(gid, name) {
-  activeGid = String(gid || DEFAULT_GID);
+  activeGid = normalizeGid(gid || DEFAULT_GID);
   if (activeGid === LIST_GID) {
     activeGid = DEFAULT_GID;
   }
@@ -233,7 +238,7 @@ function setActiveSheet(gid, name) {
 }
 
 function loadActiveSheetFromStorage() {
-  let gid = localStorage.getItem(STORAGE_GID_KEY) || DEFAULT_GID;
+  let gid = normalizeGid(localStorage.getItem(STORAGE_GID_KEY) || DEFAULT_GID);
   let name = localStorage.getItem(STORAGE_NAME_KEY) || "-";
   if (gid === LIST_GID) {
     gid = DEFAULT_GID;
@@ -250,7 +255,7 @@ async function loadSheetList() {
   const start = (rows.length > 0 && !/^\d+$/.test(String(rows[0][1]).trim())) ? 1 : 0;
   return rows.slice(start).map(r => ({
     name: String(r[0] ?? "").trim(),
-    gid: String(r[1] ?? "").trim(),
+    gid: normalizeGid(r[1] ?? ""),
   })).filter(x => x.name && x.gid);
 }
 
@@ -294,10 +299,16 @@ async function loadItemsForActiveSheet() {
     return list;
   };
 
-  items = await loadForGid(activeGid);
+  if (!activeGid) {
+    setActiveSheet(DEFAULT_GID, activeName);
+  }
+  items = await loadForGid(activeGid || DEFAULT_GID);
   if (items.length === 0 && activeGid !== DEFAULT_GID) {
     setActiveSheet(DEFAULT_GID, activeName);
-    items = await loadForGid(activeGid);
+    if (!activeGid) {
+    setActiveSheet(DEFAULT_GID, activeName);
+  }
+  items = await loadForGid(activeGid || DEFAULT_GID);
   }
   shuffleInPlace(items);
 
