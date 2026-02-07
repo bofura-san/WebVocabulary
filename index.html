@@ -221,6 +221,7 @@ let traceMode = false;      // なぞりモード中か
 let traceTarget = "";       // 正解（表示用）
 let traceTyped = "";
 let exampleVisible = false;        // いまなぞった文字列
+let isComposing = false;
 
 function normalizeGid(value) {
   const m = String(value || "").match(/\d+/);
@@ -479,7 +480,7 @@ function markCorrect() {
 }
 
 function checkAnswer() {
-  if (traceMode) return; // なぞり中は判定しない
+  if (traceMode || isComposing) return; // なぞり中/変換中は判定しない
   const user = normalizeEn(ui.answerInput.value);
   const ans = normalizeEn(current.en);
   if (!user) { setStatus("未入力です", "ng"); return; }
@@ -516,6 +517,7 @@ function flashWrongKey() {
 // iOS含め安定させるため beforeinput を優先で使う
 function onBeforeInput(ev) {
   if (!traceMode) return;
+  if (isComposing || ev.isComposing) return;
 
   // ペーストなどを防ぐ
   const t = ev.inputType || "";
@@ -575,6 +577,29 @@ function onKeyDownFallback(ev) {
   }
 }
 
+function onCompositionStart() {
+  isComposing = true;
+}
+
+function onCompositionEnd() {
+  isComposing = false;
+  if (!traceMode) return;
+  const value = ui.answerInput.value;
+  const expectedPrefix = traceTarget.slice(0, value.length);
+  if (value === expectedPrefix) {
+    traceTyped = value;
+    setGhost(traceTarget);
+    if (traceTyped.length >= traceTarget.length) {
+      setStatus("OK！次へ", "ok");
+      setTimeout(nextQuestion, NEXT_DELAY_MS);
+    }
+  } else {
+    flashWrongKey();
+    ui.answerInput.value = traceTyped;
+    setGhost(traceTarget);
+  }
+}
+
 /** ---- Hint / Reveal button ---- **/
 function onHintButton() {
   if (!revealMode) {
@@ -625,10 +650,12 @@ function onHintButton() {
 
   ui.answerInput.addEventListener("keydown", (ev) => {
     if (traceMode) { onKeyDownFallback(ev); return; }
-    if (ev.key === "Enter") checkAnswer();
+    if (ev.key === "Enter" && !ev.isComposing && !isComposing) checkAnswer();
   });
 
   ui.answerInput.addEventListener("beforeinput", onBeforeInput);
+  ui.answerInput.addEventListener("compositionstart", onCompositionStart);
+  ui.answerInput.addEventListener("compositionend", onCompositionEnd);
 })();
 </script>
 </body>
