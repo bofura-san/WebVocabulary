@@ -113,6 +113,7 @@
 
       <div class="row">
         <button class="primary" id="checkBtn">判定</button>
+        <button id="confirmBtn">確認</button>
         <button id="hintBtn">ヒントを表示</button>
         <button id="exampleBtn">例文を表示</button>
       </div>
@@ -200,6 +201,7 @@ const ui = {
   quizView: document.getElementById("quizView"),
   exampleBtn: document.getElementById("exampleBtn"),
   checkBtn: document.getElementById("checkBtn"),
+  confirmBtn: document.getElementById("confirmBtn"),
   counterPill: document.getElementById("counterPill"),
   scorePill: document.getElementById("scorePill"),
 };
@@ -214,6 +216,8 @@ const NEXT_DELAY_MS = 1000;
 const WRONG_WEIGHT = 3;
 let activeGid = DEFAULT_GID;
 let activeName = "-";
+const CONFIRM_LABEL = "\u78ba\u8a8d";
+const NEXT_LABEL = "\u6b21\u306e\u5358\u8a9e";
 
 // hint/reveal state
 let revealMode = false;     // hintBtnが「\u7b54\u3048\u3092\u8868\u793a」状態か
@@ -222,6 +226,7 @@ let traceTarget = "";       // 正解（表示用）
 let traceTyped = "";
 let exampleVisible = false;        // いまなぞった文字列
 let isComposing = false;
+let confirmRevealed = false;
 
 function normalizeGid(value) {
   const m = String(value || "").match(/\d+/);
@@ -395,11 +400,14 @@ function resetHintAndTraceUI() {
   traceMode = false;
   traceTarget = "";
   traceTyped = "";
+  confirmRevealed = false;
   ui.hintBtn.textContent = "ヒントを表示";
+  if (ui.confirmBtn) ui.confirmBtn.textContent = CONFIRM_LABEL;
   setHint("");
   setGhost(""); // ghost消す
   ui.checkBtn.disabled = false;
   ui.answerInput.value = "";
+  ui.answerInput.readOnly = false;
   ui.answerInput.placeholder = "英語を入力してEnter（または「判定」）";
 }
 
@@ -480,6 +488,7 @@ function markCorrect() {
 }
 
 function checkAnswer() {
+  if (confirmRevealed) return;
   if (traceMode || isComposing) return; // なぞり中/変換中は判定しない
   const user = normalizeEn(ui.answerInput.value);
   const ans = normalizeEn(current.en);
@@ -602,6 +611,7 @@ function onCompositionEnd() {
 
 /** ---- Hint / Reveal button ---- **/
 function onHintButton() {
+  if (confirmRevealed) return;
   if (!revealMode) {
     // 1回目：ヒント表示 → ボタンが「\u7b54\u3048\u3092\u8868\u793a」に変化
     revealMode = true;
@@ -613,6 +623,30 @@ function onHintButton() {
     markWrong("答えを見ました（ミス扱い）");
     enterTraceMode();
   }
+}
+
+/** ---- Confirm (show answer) ---- **/
+function onConfirmButton() {
+  if (confirmRevealed) {
+    nextQuestion();
+    return;
+  }
+  confirmRevealed = true;
+  revealMode = false;
+  traceMode = false;
+  traceTarget = "";
+  traceTyped = "";
+  if (ui.confirmBtn) ui.confirmBtn.textContent = NEXT_LABEL;
+  ui.hintBtn.textContent = "ヒントを表示";
+  ui.checkBtn.disabled = true;
+  ui.answerInput.readOnly = true;
+  ui.answerInput.placeholder = "";
+  ui.answerInput.value = String(current.en || "").trim();
+  setHint("");
+  setGhost("");
+  setStatus("答え表示", "");
+  setDebug("");
+  ui.answerInput.focus();
 }
 
 /** ---------- Boot ---------- **/
@@ -628,6 +662,7 @@ function onHintButton() {
 
   ui.checkBtn.addEventListener("click", checkAnswer);
   ui.hintBtn.addEventListener("click", onHintButton);
+  if (ui.confirmBtn) ui.confirmBtn.addEventListener("click", onConfirmButton);
 
   if (ui.switchSheetBtn) {
     ui.switchSheetBtn.addEventListener("click", async () => {
@@ -650,6 +685,7 @@ function onHintButton() {
 
   ui.answerInput.addEventListener("keydown", (ev) => {
     if (traceMode) { onKeyDownFallback(ev); return; }
+    if (confirmRevealed) return;
     if (ev.key === "Enter" && !ev.isComposing && !isComposing) checkAnswer();
   });
 
