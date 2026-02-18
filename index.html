@@ -353,8 +353,9 @@ function normalizeEn(s) {
 }
 
 function hasPinyinMarks(s) {
-  return /[?????????????????????????]/.test(String(s));
+  return /[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]/.test(String(s));
 }
+
 
 function normalizePinyin(s) {
   return String(s)
@@ -362,10 +363,11 @@ function normalizePinyin(s) {
     .trim()
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
-    .replace(/?/g, "u")
+    .replace(/ü/g, "u")
     .replace(/v/g, "u")
     .replace(/\s+/g, " ");
 }
+
 
 function normalizeAnswerPair(userRaw, answerRaw) {
   if (hasPinyinMarks(answerRaw)) {
