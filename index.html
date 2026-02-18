@@ -352,6 +352,35 @@ function normalizeEn(s) {
     .replace(/[’‘]/g, "'");
 }
 
+function hasPinyinMarks(s) {
+  return /[?????????????????????????]/.test(String(s));
+}
+
+function normalizePinyin(s) {
+  return String(s)
+    .toLowerCase()
+    .trim()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/?/g, "u")
+    .replace(/v/g, "u")
+    .replace(/\s+/g, " ");
+}
+
+function normalizeAnswerPair(userRaw, answerRaw) {
+  if (hasPinyinMarks(answerRaw)) {
+    return {
+      user: normalizePinyin(userRaw),
+      answer: normalizePinyin(answerRaw),
+    };
+  }
+  return {
+    user: normalizeEn(userRaw),
+    answer: normalizeEn(answerRaw),
+  };
+}
+
+
 function setStatus(msg, cls) {
   ui.statusText.className = "status " + (cls || "");
   ui.statusText.textContent = msg || "";
@@ -490,8 +519,9 @@ function markCorrect() {
 function checkAnswer() {
   if (confirmRevealed) return;
   if (traceMode || isComposing) return; // なぞり中/変換中は判定しない
-  const user = normalizeEn(ui.answerInput.value);
-  const ans = normalizeEn(current.en);
+  const normalized = normalizeAnswerPair(ui.answerInput.value, current.en);
+  const user = normalized.user;
+  const ans = normalized.answer;
   if (!user) { setStatus("未入力です", "ng"); return; }
 
   if (user === ans) {
@@ -526,6 +556,7 @@ function flashWrongKey() {
 // iOS含め安定させるため beforeinput を優先で使う
 function onBeforeInput(ev) {
   if (!traceMode) return;
+  if (hasPinyinMarks(current.en)) return;
   if (isComposing || ev.isComposing) return;
 
   // ペーストなどを防ぐ
@@ -593,13 +624,21 @@ function onCompositionStart() {
 function onCompositionEnd() {
   isComposing = false;
   if (!traceMode) return;
+  if (hasPinyinMarks(traceTarget)) {
+    const normalized = normalizeAnswerPair(ui.answerInput.value, traceTarget);
+    if (normalized.user === normalized.answer) {
+      setStatus("OK???", "ok");
+      setTimeout(nextQuestion, NEXT_DELAY_MS);
+    }
+    return;
+  }
   const value = ui.answerInput.value;
   const expectedPrefix = traceTarget.slice(0, value.length);
   if (value === expectedPrefix) {
     traceTyped = value;
     setGhost(traceTarget);
     if (traceTyped.length >= traceTarget.length) {
-      setStatus("OK！次へ", "ok");
+      setStatus("OK???", "ok");
       setTimeout(nextQuestion, NEXT_DELAY_MS);
     }
   } else {
@@ -608,6 +647,7 @@ function onCompositionEnd() {
     setGhost(traceTarget);
   }
 }
+
 
 /** ---- Hint / Reveal button ---- **/
 function onHintButton() {
@@ -690,6 +730,15 @@ function onConfirmButton() {
   });
 
   ui.answerInput.addEventListener("beforeinput", onBeforeInput);
+  ui.answerInput.addEventListener("input", () => {
+    if (!traceMode) return;
+    if (!hasPinyinMarks(traceTarget)) return;
+    const normalized = normalizeAnswerPair(ui.answerInput.value, traceTarget);
+    if (normalized.user === normalized.answer) {
+      setStatus("OK???", "ok");
+      setTimeout(nextQuestion, NEXT_DELAY_MS);
+    }
+  });
   ui.answerInput.addEventListener("compositionstart", onCompositionStart);
   ui.answerInput.addEventListener("compositionend", onCompositionEnd);
 })();
