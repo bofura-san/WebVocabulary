@@ -113,7 +113,7 @@
 
       <div class="row">
         <button class="primary" id="checkBtn">判定</button>
-        <button id="confirmBtn">確認</button>
+        <button id="confirmBtn">答えを表示(失敗なし)</button>
         <button id="hintBtn">ヒントを表示</button>
         <button id="exampleBtn">例文を表示</button>
       </div>
@@ -216,8 +216,8 @@ const NEXT_DELAY_MS = 1000;
 const WRONG_WEIGHT = 3;
 let activeGid = DEFAULT_GID;
 let activeName = "-";
-const CONFIRM_LABEL = "\u78ba\u8a8d";
-const NEXT_LABEL = "\u6b21\u306e\u5358\u8a9e";
+const CONFIRM_LABEL = "答えを表示(失敗なし)";
+const NEXT_LABEL = "次の単語";
 
 // hint/reveal state
 let revealMode = false;     // hintBtnが「\u7b54\u3048\u3092\u8868\u793a」状態か
@@ -644,7 +644,7 @@ function onConfirmButton() {
   ui.answerInput.value = String(current.en || "").trim();
   setHint("");
   setGhost("");
-  setStatus("答え表示", "");
+  setStatus("答え表示(失敗なし)", "");
   setDebug("");
   ui.answerInput.focus();
 }
