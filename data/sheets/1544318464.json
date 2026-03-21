@@ -1,0 +1,2402 @@
+{
+  "generatedAt": "2026-03-21T15:02:11.537Z",
+  "sheetId": "1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow",
+  "gid": "1544318464",
+  "name": "中国語",
+  "hash": "b86041f0dab52eeb0bff23ee51db50fae200d6095269d653b51a77b5b39f602c",
+  "itemCount": 299,
+  "items": [
+    {
+      "id": "1",
+      "en": "āyí",
+      "jp": "阿姨",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "2",
+      "en": "a",
+      "jp": "啊",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "3",
+      "en": "ǎi",
+      "jp": "矮",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "4",
+      "en": "àihào",
+      "jp": "爱好",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "5",
+      "en": "ānjìng",
+      "jp": "安静",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "6",
+      "en": "bǎ",
+      "jp": "把",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "7",
+      "en": "bān",
+      "jp": "班",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "8",
+      "en": "bān",
+      "jp": "搬",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "9",
+      "en": "bàn",
+      "jp": "半",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "10",
+      "en": "bànfǎ",
+      "jp": "办法",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "11",
+      "en": "bàngōngshì",
+      "jp": "办公室",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "12",
+      "en": "bāngmáng",
+      "jp": "帮忙",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "13",
+      "en": "bāo",
+      "jp": "包",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "14",
+      "en": "bǎo",
+      "jp": "饱",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "15",
+      "en": "běifāng",
+      "jp": "北方",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "16",
+      "en": "bèi",
+      "jp": "被",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "17",
+      "en": "bízi",
+      "jp": "鼻子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "18",
+      "en": "bǐjiào",
+      "jp": "比较",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "19",
+      "en": "bǐsài",
+      "jp": "比赛",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "20",
+      "en": "bìxū",
+      "jp": "必须",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "21",
+      "en": "biànhuà",
+      "jp": "变化",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "22",
+      "en": "biǎoshì",
+      "jp": "表示",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "23",
+      "en": "biǎoyǎn",
+      "jp": "表演",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "24",
+      "en": "biéren",
+      "jp": "别人",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "25",
+      "en": "bīnguǎn",
+      "jp": "宾馆",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "26",
+      "en": "bīngxiāng",
+      "jp": "冰箱",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "27",
+      "en": "cái",
+      "jp": "才",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "28",
+      "en": "càidān",
+      "jp": "菜单",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "29",
+      "en": "cānjiā",
+      "jp": "参加",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "30",
+      "en": "cǎo",
+      "jp": "草",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "31",
+      "en": "céng",
+      "jp": "层",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "32",
+      "en": "chā",
+      "jp": "差",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "33",
+      "en": "chāoshì",
+      "jp": "超市",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "34",
+      "en": "chènshān",
+      "jp": "衬衫",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "35",
+      "en": "chéngjì",
+      "jp": "成绩",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "36",
+      "en": "chéngshì",
+      "jp": "城市",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "37",
+      "en": "chídào",
+      "jp": "迟到",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "38",
+      "en": "chūxiàn",
+      "jp": "出现",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "39",
+      "en": "chúfáng",
+      "jp": "厨房",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "40",
+      "en": "chúle",
+      "jp": "除了",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "41",
+      "en": "chūn",
+      "jp": "春",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "42",
+      "en": "cíyǔ",
+      "jp": "词语",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "43",
+      "en": "cōngming",
+      "jp": "聪明",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "44",
+      "en": "dǎsǎo",
+      "jp": "打扫",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "45",
+      "en": "dǎsuàn",
+      "jp": "打算",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "46",
+      "en": "dài",
+      "jp": "带",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "47",
+      "en": "dānxīn",
+      "jp": "担心",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "48",
+      "en": "dàngāo",
+      "jp": "蛋糕",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "49",
+      "en": "dāngrán",
+      "jp": "当然",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "50",
+      "en": "dì",
+      "jp": "地",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "51",
+      "en": "dēng",
+      "jp": "灯",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "52",
+      "en": "dī",
+      "jp": "低",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "53",
+      "en": "dìfāng",
+      "jp": "地方",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "54",
+      "en": "dìtiě",
+      "jp": "地铁",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "55",
+      "en": "dìtú",
+      "jp": "地图",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "56",
+      "en": "diàntī",
+      "jp": "电梯",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "57",
+      "en": "diànzǐyóujiàn",
+      "jp": "电子邮件",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "58",
+      "en": "dōng",
+      "jp": "东",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "59",
+      "en": "dōng",
+      "jp": "冬",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "60",
+      "en": "dòngwù",
+      "jp": "动物",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "61",
+      "en": "duǎn",
+      "jp": "短",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "62",
+      "en": "duàn",
+      "jp": "段",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "63",
+      "en": "duànliàn",
+      "jp": "锻炼",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "64",
+      "en": "duōme",
+      "jp": "多么",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "65",
+      "en": "è",
+      "jp": "饿",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "66",
+      "en": "érqiě",
+      "jp": "而且",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "67",
+      "en": "ěrduo",
+      "jp": "耳朵",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "68",
+      "en": "fāshāo",
+      "jp": "发烧",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "69",
+      "en": "fāxiàn",
+      "jp": "发现",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "70",
+      "en": "fāngbiàn",
+      "jp": "方便",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "71",
+      "en": "fàng",
+      "jp": "放",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "72",
+      "en": "fàngxīn",
+      "jp": "放心",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "73",
+      "en": "fēn",
+      "jp": "分",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "74",
+      "en": "fùjìn",
+      "jp": "附近",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "75",
+      "en": "fùxí",
+      "jp": "复习",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "76",
+      "en": "gānjìng",
+      "jp": "干净",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "77",
+      "en": "gǎn",
+      "jp": "敢",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "78",
+      "en": "gǎnmào",
+      "jp": "感冒",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "79",
+      "en": "gāngcái",
+      "jp": "刚才",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "80",
+      "en": "gēn",
+      "jp": "跟",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "81",
+      "en": "gēnjù",
+      "jp": "根据",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "82",
+      "en": "gēng",
+      "jp": "更",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "83",
+      "en": "gōngyuán",
+      "jp": "公园",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "84",
+      "en": "gùshi",
+      "jp": "故事",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "85",
+      "en": "guāfēng",
+      "jp": "刮风",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "86",
+      "en": "guān",
+      "jp": "关",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "87",
+      "en": "guānxi",
+      "jp": "关系",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "88",
+      "en": "guānxīn",
+      "jp": "关心",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "89",
+      "en": "guānyú",
+      "jp": "关于",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "90",
+      "en": "guójiā",
+      "jp": "国家",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "91",
+      "en": "guǒzhī",
+      "jp": "果汁",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "92",
+      "en": "guòqu",
+      "jp": "过去",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "93",
+      "en": "háishi",
+      "jp": "还是",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "94",
+      "en": "hàipà",
+      "jp": "害怕",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "95",
+      "en": "hé",
+      "jp": "河",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "96",
+      "en": "hēibǎn",
+      "jp": "黑板",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "97",
+      "en": "hùzhào",
+      "jp": "护照",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "98",
+      "en": "huā",
+      "jp": "花",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "99",
+      "en": "huāyuán",
+      "jp": "花园",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "100",
+      "en": "huà",
+      "jp": "画",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "101",
+      "en": "huài",
+      "jp": "坏",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "102",
+      "en": "huán",
+      "jp": "还",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "103",
+      "en": "huánjìng",
+      "jp": "环境",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "104",
+      "en": "huàn",
+      "jp": "换",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "105",
+      "en": "huáng",
+      "jp": "黄",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "106",
+      "en": "huìyì",
+      "jp": "会议",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "107",
+      "en": "huòzhě",
+      "jp": "或者",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "108",
+      "en": "jīhū",
+      "jp": "几乎",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "109",
+      "en": "jīhuì",
+      "jp": "机会",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "110",
+      "en": "jí",
+      "jp": "极",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "111",
+      "en": "jìde",
+      "jp": "记得",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "112",
+      "en": "jìjié",
+      "jp": "季节",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "113",
+      "en": "jiǎnchá",
+      "jp": "检查",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "114",
+      "en": "jiǎndān",
+      "jp": "简单",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "115",
+      "en": "jiànkāng",
+      "jp": "健康",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "116",
+      "en": "jiànmiàn",
+      "jp": "见面",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "117",
+      "en": "jiǎng",
+      "jp": "讲",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "118",
+      "en": "jiào",
+      "jp": "教",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "119",
+      "en": "jiǎo",
+      "jp": "脚",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "120",
+      "en": "jiǎo",
+      "jp": "角",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "121",
+      "en": "jiē",
+      "jp": "接",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "122",
+      "en": "jiēdào",
+      "jp": "街道",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "123",
+      "en": "jiéhūn",
+      "jp": "结婚",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "124",
+      "en": "jiéshù",
+      "jp": "结束",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "125",
+      "en": "jiémù",
+      "jp": "节目",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "126",
+      "en": "jiérì",
+      "jp": "节日",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "127",
+      "en": "jiějué",
+      "jp": "解决",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "128",
+      "en": "jiè",
+      "jp": "借",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "129",
+      "en": "jīngcháng",
+      "jp": "经常",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "130",
+      "en": "jīngguò",
+      "jp": "经过",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "131",
+      "en": "jīnglǐ",
+      "jp": "经理",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "132",
+      "en": "jiǔ",
+      "jp": "久",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "133",
+      "en": "jiù",
+      "jp": "旧",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "134",
+      "en": "jǔxíng",
+      "jp": "举行",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "135",
+      "en": "jùzi",
+      "jp": "句子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "136",
+      "en": "juédìng",
+      "jp": "决定",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "137",
+      "en": "kě",
+      "jp": "渴",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "138",
+      "en": "kěài",
+      "jp": "可爱",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "139",
+      "en": "kè",
+      "jp": "刻",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "140",
+      "en": "kèrén",
+      "jp": "客人",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "141",
+      "en": "kōngtiáo",
+      "jp": "空调",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "142",
+      "en": "kǒu",
+      "jp": "口",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "143",
+      "en": "kū",
+      "jp": "哭",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "144",
+      "en": "kùzi",
+      "jp": "裤子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "145",
+      "en": "kuàizi",
+      "jp": "筷子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "146",
+      "en": "lán",
+      "jp": "蓝",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "147",
+      "en": "lǎo",
+      "jp": "老",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "148",
+      "en": "líkāi",
+      "jp": "离开",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "149",
+      "en": "lǐwù",
+      "jp": "礼物",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "150",
+      "en": "lìshǐ",
+      "jp": "历史",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "151",
+      "en": "liǎn",
+      "jp": "脸",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "152",
+      "en": "liànxí",
+      "jp": "练习",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "153",
+      "en": "liàng",
+      "jp": "辆",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "154",
+      "en": "liǎojiě",
+      "jp": "了解",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "155",
+      "en": "línjū",
+      "jp": "邻居",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "156",
+      "en": "lóu",
+      "jp": "楼",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "157",
+      "en": "lǜ",
+      "jp": "绿",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "158",
+      "en": "mǎ",
+      "jp": "马",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "159",
+      "en": "mǎnyì",
+      "jp": "满意",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "160",
+      "en": "màozi",
+      "jp": "帽子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "161",
+      "en": "mǐ",
+      "jp": "米",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "162",
+      "en": "miànbāo",
+      "jp": "面包",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "163",
+      "en": "miàntiáo",
+      "jp": "面条",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "164",
+      "en": "míngbai",
+      "jp": "明白",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "165",
+      "en": "ná",
+      "jp": "拿",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "166",
+      "en": "nǎinai",
+      "jp": "奶奶",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "167",
+      "en": "nán",
+      "jp": "南",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "168",
+      "en": "nán",
+      "jp": "难",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "169",
+      "en": "nánguò",
+      "jp": "难过",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "170",
+      "en": "niánjí",
+      "jp": "年级",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "171",
+      "en": "niánqīng",
+      "jp": "年轻",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "172",
+      "en": "niǎo",
+      "jp": "鸟",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "173",
+      "en": "nǔlì",
+      "jp": "努力",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "174",
+      "en": "páshān",
+      "jp": "爬山",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "175",
+      "en": "pánzi",
+      "jp": "盘子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "176",
+      "en": "pàng",
+      "jp": "胖",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "177",
+      "en": "píjiǔ",
+      "jp": "啤酒",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "178",
+      "en": "pútao",
+      "jp": "葡萄",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "179",
+      "en": "pǔtōnghuà",
+      "jp": "普通话",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "180",
+      "en": "qíshí",
+      "jp": "其实",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "181",
+      "en": "qítā",
+      "jp": "其他",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "182",
+      "en": "qí",
+      "jp": "骑",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "183",
+      "en": "qiānbǐ",
+      "jp": "铅笔",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "184",
+      "en": "qīngchu",
+      "jp": "清楚",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "185",
+      "en": "qiū",
+      "jp": "秋",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "186",
+      "en": "qíguài",
+      "jp": "奇怪",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "187",
+      "en": "qúnzi",
+      "jp": "裙子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "188",
+      "en": "ránhòu",
+      "jp": "然后",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "189",
+      "en": "rèqíng",
+      "jp": "热情",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "190",
+      "en": "rènwéi",
+      "jp": "认为",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "191",
+      "en": "rènzhēn",
+      "jp": "认真",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "192",
+      "en": "róngyì",
+      "jp": "容易",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "193",
+      "en": "rúguǒ",
+      "jp": "如果",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "194",
+      "en": "sǎn",
+      "jp": "伞",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "195",
+      "en": "shàngwǎng",
+      "jp": "上网",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "196",
+      "en": "shēngqì",
+      "jp": "生气",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "197",
+      "en": "shēngyīn",
+      "jp": "声音",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "198",
+      "en": "shǐ",
+      "jp": "使",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "199",
+      "en": "shìjiè",
+      "jp": "世界",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "200",
+      "en": "shòu",
+      "jp": "瘦",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "201",
+      "en": "shūfu",
+      "jp": "舒服",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "202",
+      "en": "shūshu",
+      "jp": "叔叔",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "203",
+      "en": "shù",
+      "jp": "树",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "204",
+      "en": "shùxué",
+      "jp": "数学",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "205",
+      "en": "shuāyá",
+      "jp": "刷牙",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "206",
+      "en": "shuāng",
+      "jp": "双",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "207",
+      "en": "shuǐpíng",
+      "jp": "水平",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "208",
+      "en": "sījī",
+      "jp": "司机",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "209",
+      "en": "suīrán",
+      "jp": "虽然",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "210",
+      "en": "tàiyáng",
+      "jp": "太阳",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "211",
+      "en": "táng",
+      "jp": "糖",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "212",
+      "en": "tèbié",
+      "jp": "特别",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "213",
+      "en": "téng",
+      "jp": "疼",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "214",
+      "en": "tígāo",
+      "jp": "提高",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "215",
+      "en": "tǐyù",
+      "jp": "体育",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "216",
+      "en": "tián",
+      "jp": "甜",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "217",
+      "en": "tiáo",
+      "jp": "条",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "218",
+      "en": "tóngshì",
+      "jp": "同事",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "219",
+      "en": "tóngyì",
+      "jp": "同意",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "220",
+      "en": "tóufa",
+      "jp": "头发",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "221",
+      "en": "tūrán",
+      "jp": "突然",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "222",
+      "en": "túshūguǎn",
+      "jp": "图书馆",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "223",
+      "en": "tuǐ",
+      "jp": "腿",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "224",
+      "en": "wánchéng",
+      "jp": "完成",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "225",
+      "en": "wǎn",
+      "jp": "碗",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "226",
+      "en": "wàn",
+      "jp": "万",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "227",
+      "en": "wàngjì",
+      "jp": "忘记",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "228",
+      "en": "wéi",
+      "jp": "为",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "229",
+      "en": "wèile",
+      "jp": "为了",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "230",
+      "en": "wèi",
+      "jp": "位",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "231",
+      "en": "wénhuà",
+      "jp": "文化",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "232",
+      "en": "xī",
+      "jp": "西",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "233",
+      "en": "xíguàn",
+      "jp": "习惯",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "234",
+      "en": "xǐshǒujiān",
+      "jp": "洗手间",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "235",
+      "en": "xǐzǎo",
+      "jp": "洗澡",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "236",
+      "en": "xià",
+      "jp": "夏",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "237",
+      "en": "xiān",
+      "jp": "先",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "238",
+      "en": "xiāngjiāo",
+      "jp": "香蕉",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "239",
+      "en": "xiāngtóng",
+      "jp": "相同",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "240",
+      "en": "xiāngxìn",
+      "jp": "相信",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "241",
+      "en": "xiàng",
+      "jp": "像",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "242",
+      "en": "xiǎoxīn",
+      "jp": "小心",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "243",
+      "en": "xiàozhǎng",
+      "jp": "校长",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "244",
+      "en": "xié",
+      "jp": "鞋",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "245",
+      "en": "xīnwén",
+      "jp": "新闻",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "246",
+      "en": "xīnxiān",
+      "jp": "新鲜",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "247",
+      "en": "xìn",
+      "jp": "信",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "248",
+      "en": "xínglixiāng",
+      "jp": "行李箱",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "249",
+      "en": "xìngqù",
+      "jp": "兴趣",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "250",
+      "en": "xióngmāo",
+      "jp": "熊猫",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "251",
+      "en": "xūyào",
+      "jp": "需要",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "252",
+      "en": "xuǎnzé",
+      "jp": "选择",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "253",
+      "en": "yǎnjìng",
+      "jp": "眼镜",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "254",
+      "en": "yāoqiú",
+      "jp": "要求",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "255",
+      "en": "yéye",
+      "jp": "爷爷",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "256",
+      "en": "yīdìng",
+      "jp": "一定",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "257",
+      "en": "yīgòng",
+      "jp": "一共",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "258",
+      "en": "yīhuìr",
+      "jp": "一会儿",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "259",
+      "en": "yīyàng",
+      "jp": "一样",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "260",
+      "en": "yǐhòu",
+      "jp": "以后",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "261",
+      "en": "yǐqián",
+      "jp": "以前",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "262",
+      "en": "yǐwéi",
+      "jp": "以为",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "263",
+      "en": "yībān",
+      "jp": "一般",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "264",
+      "en": "yībiān",
+      "jp": "一边",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "265",
+      "en": "yīzhí",
+      "jp": "一直",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "266",
+      "en": "yīnyuè",
+      "jp": "音乐",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "267",
+      "en": "yínháng",
+      "jp": "银行",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "268",
+      "en": "yīnggāi",
+      "jp": "应该",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "269",
+      "en": "yǐngxiǎng",
+      "jp": "影响",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "270",
+      "en": "yòng",
+      "jp": "用",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "271",
+      "en": "yóuxì",
+      "jp": "游戏",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "272",
+      "en": "yǒumíng",
+      "jp": "有名",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "273",
+      "en": "yòu",
+      "jp": "又",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "274",
+      "en": "yùdào",
+      "jp": "遇到",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "275",
+      "en": "yuànyì",
+      "jp": "愿意",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "276",
+      "en": "yuèliang",
+      "jp": "月亮",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "277",
+      "en": "yuè",
+      "jp": "越",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "278",
+      "en": "yún",
+      "jp": "云",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "279",
+      "en": "zhàn",
+      "jp": "站",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "280",
+      "en": "cháng",
+      "jp": "长",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "281",
+      "en": "zháojí",
+      "jp": "着急",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "282",
+      "en": "zhàogu",
+      "jp": "照顾",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "283",
+      "en": "zhàopiàn",
+      "jp": "照片",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "284",
+      "en": "zhàoxiàngjī",
+      "jp": "照相机",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "285",
+      "en": "zhǐ",
+      "jp": "只",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "286",
+      "en": "zhōngjiān",
+      "jp": "中间",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "287",
+      "en": "zhōngyú",
+      "jp": "终于",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "288",
+      "en": "zhǒng",
+      "jp": "种",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "289",
+      "en": "zhòngyào",
+      "jp": "重要",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "290",
+      "en": "zhōumò",
+      "jp": "周末",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "291",
+      "en": "zhǔyào",
+      "jp": "主要",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "292",
+      "en": "zhù",
+      "jp": "祝",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "293",
+      "en": "zhùyì",
+      "jp": "注意",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "294",
+      "en": "zìdiǎn",
+      "jp": "字典",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "295",
+      "en": "zìjǐ",
+      "jp": "自己",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "296",
+      "en": "zǒngshì",
+      "jp": "总是",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "297",
+      "en": "zuìjìn",
+      "jp": "最近",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "298",
+      "en": "zuòyè",
+      "jp": "作业",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "299",
+      "en": "zuòyòng",
+      "jp": "作用",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    }
+  ]
+}
