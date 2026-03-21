@@ -136,23 +136,39 @@
   </div>
 
 <script>
-/** ---------- CSV Loader ---------- **/
+/** ---------- Data Loader ---------- **/
 const SHEET_ID = "1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow";
 const DEFAULT_GID = "743650624";
 const LIST_GID = "1137954113";
 const STORAGE_GID_KEY = "wv.sheet.gid";
 const STORAGE_NAME_KEY = "wv.sheet.name";
+const STATIC_DATA_ROOT = "./data";
+const STATIC_LIST_URL = `${STATIC_DATA_ROOT}/list.json`;
+const STATIC_SHEET_DIR = `${STATIC_DATA_ROOT}/sheets`;
+const PREFER_STATIC_DATA = location.protocol !== "file:";
+
+let staticSheetListCache = null;
 
 function buildSheetCsvUrl(gid) {
   return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
 }
 
+function buildStaticSheetUrl(gid) {
+  return `${STATIC_SHEET_DIR}/${normalizeGid(gid)}.json`;
+}
+
 
 async function loadCSV(url) {
-  const res = await fetch(url, { cache: "no-store" });
+  const res = await fetch(url, { cache: "default" });
   if (!res.ok) throw new Error("CSV読み込み失敗 " + res.status);
   const text = await res.text();
   return parseCSV(text);
+}
+
+async function loadJSON(url) {
+  const res = await fetch(url, { cache: "default" });
+  if (!res.ok) throw new Error(`JSON load failed ${res.status}`);
+  return res.json();
 }
 
 function parseCSV(text) {
@@ -179,6 +195,128 @@ function parseCSV(text) {
   }
   if (cell.length > 0 || row.length > 0) { row.push(cell); rows.push(row); }
   return rows.filter(r => r.some(c => String(c).trim() !== ""));
+}
+
+function mapRowToItem(rowLike) {
+  let exampleEn = String(rowLike[4] ?? "").trim();
+  let exampleJp = String(rowLike[5] ?? "").trim();
+  if (!exampleEn && /[A-Za-z]/.test(exampleJp)) {
+    exampleEn = exampleJp;
+    exampleJp = String(rowLike[6] ?? "").trim();
+  }
+  return {
+    id: String(rowLike[0] ?? "").trim(),
+    en: String(rowLike[1] ?? "").trim(),
+    jp: String(rowLike[2] ?? "").trim(),
+    pos: String(rowLike[3] ?? "").trim(),
+    exampleEn,
+    exampleJp,
+    wrongCount: 0,
+  };
+}
+
+function rowsToItems(rows) {
+  const startIndex = (rows.length > 0 && !/^\d+$/.test(String(rows[0][0]).trim())) ? 1 : 0;
+  return rows
+    .slice(startIndex)
+    .map(mapRowToItem)
+    .filter(item => item.en && item.jp);
+}
+
+function normalizeStaticSheetList(data) {
+  const sheets = Array.isArray(data?.sheets) ? data.sheets : [];
+  return sheets.map(entry => ({
+    name: String(entry?.name ?? "").trim(),
+    gid: normalizeGid(entry?.gid ?? ""),
+    hash: String(entry?.hash ?? "").trim(),
+    updatedAt: String(entry?.updatedAt ?? "").trim(),
+    itemCount: Number(entry?.itemCount ?? 0),
+  })).filter(entry => entry.name && entry.gid);
+}
+
+function normalizeStaticSheetData(data, fallbackGid) {
+  const rawItems = Array.isArray(data?.items) ? data.items : [];
+  return {
+    gid: normalizeGid(data?.gid ?? fallbackGid),
+    name: String(data?.name ?? "").trim(),
+    hash: String(data?.hash ?? "").trim(),
+    updatedAt: String(data?.updatedAt ?? "").trim(),
+    items: rawItems.map(item => ({
+      id: String(item?.id ?? "").trim(),
+      en: String(item?.en ?? "").trim(),
+      jp: String(item?.jp ?? "").trim(),
+      pos: String(item?.pos ?? "").trim(),
+      exampleEn: String(item?.exampleEn ?? "").trim(),
+      exampleJp: String(item?.exampleJp ?? "").trim(),
+      wrongCount: 0,
+    })).filter(item => item.en && item.jp),
+  };
+}
+
+async function loadStaticSheetList() {
+  if (!PREFER_STATIC_DATA) {
+    throw new Error("static data disabled on file protocol");
+  }
+  if (staticSheetListCache) {
+    return staticSheetListCache;
+  }
+  const data = await loadJSON(STATIC_LIST_URL);
+  const list = normalizeStaticSheetList(data);
+  if (!list.length) {
+    throw new Error("static sheet list is empty");
+  }
+  staticSheetListCache = list;
+  return list;
+}
+
+async function loadSheetListFromCsv() {
+  if (!LIST_GID || LIST_GID === "PUT_LIST_GID_HERE") {
+    throw new Error("LIST_GID is not set");
+  }
+  const rows = await loadCSV(buildSheetCsvUrl(LIST_GID));
+  const start = (rows.length > 0 && !/^\d+$/.test(String(rows[0][1]).trim())) ? 1 : 0;
+  return rows.slice(start).map(r => ({
+    name: String(r[0] ?? "").trim(),
+    gid: normalizeGid(r[1] ?? ""),
+    hash: String(r[2] ?? "").trim(),
+    updatedAt: String(r[3] ?? "").trim(),
+    itemCount: 0,
+  })).filter(entry => entry.name && entry.gid);
+}
+
+async function loadStaticSheetData(gid) {
+  if (!PREFER_STATIC_DATA) {
+    throw new Error("static data disabled on file protocol");
+  }
+  const data = await loadJSON(buildStaticSheetUrl(gid));
+  const normalized = normalizeStaticSheetData(data, gid);
+  if (!normalized.items.length) {
+    throw new Error("static sheet is empty");
+  }
+  return normalized;
+}
+
+async function loadSheetDataFromCsv(gid) {
+  const rows = await loadCSV(buildSheetCsvUrl(gid));
+  return {
+    gid: normalizeGid(gid),
+    name: "",
+    hash: "",
+    updatedAt: "",
+    items: rowsToItems(rows),
+  };
+}
+
+async function loadSheetData(gid) {
+  try {
+    const data = await loadStaticSheetData(gid);
+    setDebug(`source=static gid=${data.gid} items=${data.items.length}`);
+    return data;
+  } catch (staticError) {
+    const data = await loadSheetDataFromCsv(gid);
+    setDebug(`source=sheets gid=${data.gid} items=${data.items.length}`);
+    return data;
+  }
 }
 
 /** ---------- Quiz Logic ---------- **/
@@ -261,16 +399,15 @@ function loadActiveSheetFromStorage() {
 }
 
 async function loadSheetList() {
-  if (!LIST_GID || LIST_GID === "PUT_LIST_GID_HERE") {
-    throw new Error("LIST_GID is not set");
+  try {
+    const list = await loadStaticSheetList();
+    setDebug(`source=static list=${list.length}`);
+    return list;
+  } catch (staticError) {
+    const list = await loadSheetListFromCsv();
+    setDebug(`source=sheets list=${list.length}`);
+    return list;
   }
-  const rows = await loadCSV(buildSheetCsvUrl(LIST_GID));
-  setDebug(`list gid=${LIST_GID} rows=${rows.length} cols=${rows[0] ? rows[0].length : 0}`);
-  const start = (rows.length > 0 && !/^\d+$/.test(String(rows[0][1]).trim())) ? 1 : 0;
-  return rows.slice(start).map(r => ({
-    name: String(r[0] ?? "").trim(),
-    gid: normalizeGid(r[1] ?? ""),
-  })).filter(x => x.name && x.gid);
 }
 
 function renderSheetList(list) {
@@ -280,51 +417,38 @@ function renderSheetList(list) {
     const btn = document.createElement("button");
     btn.className = "sheetItemBtn";
     btn.textContent = item.name;
-    btn.addEventListener("click", () => {
-      setActiveSheet(item.gid, item.name);
-      loadItemsForActiveSheet();
-      setView("quiz");
+    btn.addEventListener("click", async () => {
+      try {
+        setActiveSheet(item.gid, item.name);
+        await loadItemsForActiveSheet();
+        setView("quiz");
+        setStatus("");
+      } catch (e) {
+        setStatus(String(e), "ng");
+      }
     });
     ui.sheetList.appendChild(btn);
   }
 }
 
 async function loadItemsForActiveSheet() {
-  const loadForGid = async (gid) => {
-    const rows = await loadCSV(buildSheetCsvUrl(gid));
-    setDebug(`gid=${gid} rows=${rows.length} cols=${rows[0] ? rows[0].length : 0}`);
-    const startIndex = (rows.length > 0 && !/^\d+$/.test(String(rows[0][0]).trim())) ? 1 : 0;
-    const list = rows.slice(startIndex).map(r => {
-      let exampleEn = String(r[4] ?? "").trim();
-      let exampleJp = String(r[5] ?? "").trim();
-      if (!exampleEn && /[A-Za-z]/.test(exampleJp)) {
-        exampleEn = exampleJp;
-        exampleJp = String(r[6] ?? "").trim();
-      }
-      return {
-        id: String(r[0] ?? "").trim(),
-        en: String(r[1] ?? "").trim(),
-        jp: String(r[2] ?? "").trim(),
-        pos: String(r[3] ?? "").trim(),
-        exampleEn,
-        exampleJp,
-        wrongCount: 0,
-      };
-    }).filter(x => x.en && x.jp);
-    return list;
-  };
+  let gid = activeGid || DEFAULT_GID;
+  if (!gid) {
+    setActiveSheet(DEFAULT_GID, activeName);
+    gid = DEFAULT_GID;
+  }
 
-  if (!activeGid) {
+  let data = await loadSheetData(gid);
+  if (data.items.length === 0 && gid !== DEFAULT_GID) {
     setActiveSheet(DEFAULT_GID, activeName);
+    gid = DEFAULT_GID;
+    data = await loadSheetData(gid);
   }
-  items = await loadForGid(activeGid || DEFAULT_GID);
-  if (items.length === 0 && activeGid !== DEFAULT_GID) {
-    setActiveSheet(DEFAULT_GID, activeName);
-    if (!activeGid) {
-    setActiveSheet(DEFAULT_GID, activeName);
+
+  if (data.name) {
+    setActiveSheet(gid, data.name);
   }
-  items = await loadForGid(activeGid || DEFAULT_GID);
-  }
+  items = data.items;
   shuffleInPlace(items);
 
   if (items.length === 0) throw new Error("有効な単語行が0件でした（CSV列を確認してください）");

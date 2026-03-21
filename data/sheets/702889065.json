@@ -1,0 +1,1538 @@
+{
+  "generatedAt": "2026-03-21T14:40:33.678Z",
+  "sheetId": "1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow",
+  "gid": "702889065",
+  "name": "中国語基礎1",
+  "hash": "cf2aacaa986ee9d675c15c128228a5464c18d0f544f9efd20dbe1d05fbb788ff",
+  "itemCount": 191,
+  "items": [
+    {
+      "id": "1",
+      "en": "zánmen",
+      "jp": "咱们",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "2",
+      "en": "dàjiā",
+      "jp": "大家",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "3",
+      "en": "zìjǐ",
+      "jp": "自己",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "4",
+      "en": "biéren",
+      "jp": "别人",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "5",
+      "en": "shéi",
+      "jp": "谁",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "6",
+      "en": "nánrén",
+      "jp": "男人",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "7",
+      "en": "nǚrén",
+      "jp": "女人",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "8",
+      "en": "háizi",
+      "jp": "孩子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "9",
+      "en": "értóng",
+      "jp": "儿童",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "10",
+      "en": "xiānsheng",
+      "jp": "先生",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "11",
+      "en": "xiǎojie",
+      "jp": "小姐",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "12",
+      "en": "míngzì",
+      "jp": "名字",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "13",
+      "en": "xìng",
+      "jp": "姓",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "14",
+      "en": "xìngbié",
+      "jp": "性别",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "15",
+      "en": "shēngmìng",
+      "jp": "生命",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "16",
+      "en": "chūshēng",
+      "jp": "出生",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "17",
+      "en": "gè",
+      "jp": "个",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "18",
+      "en": "wèi",
+      "jp": "位",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "19",
+      "en": "kǒu",
+      "jp": "口",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "20",
+      "en": "bàba",
+      "jp": "爸爸",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "21",
+      "en": "māma",
+      "jp": "妈妈",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "22",
+      "en": "fùqīn",
+      "jp": "父亲",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "23",
+      "en": "mǔqīn",
+      "jp": "母亲",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "24",
+      "en": "gēge",
+      "jp": "哥哥",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "25",
+      "en": "dìdi",
+      "jp": "弟弟",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "26",
+      "en": "jiějie",
+      "jp": "姐姐",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "27",
+      "en": "mèimei",
+      "jp": "妹妹",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "28",
+      "en": "yéye",
+      "jp": "爷爷",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "29",
+      "en": "nǎinai",
+      "jp": "奶奶",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "30",
+      "en": "érzi",
+      "jp": "儿子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "31",
+      "en": "nǚér",
+      "jp": "女儿",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "32",
+      "en": "sūnzi",
+      "jp": "孙子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "33",
+      "en": "zhàngfu",
+      "jp": "丈夫",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "34",
+      "en": "qīzi",
+      "jp": "妻子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "35",
+      "en": "shūshu",
+      "jp": "叔叔",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "36",
+      "en": "āyí",
+      "jp": "阿姨",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "37",
+      "en": "qīnqi",
+      "jp": "亲戚",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "38",
+      "en": "péngyou",
+      "jp": "朋友",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "39",
+      "en": "tóngxué",
+      "jp": "同学",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "40",
+      "en": "tóngshì",
+      "jp": "同事",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "41",
+      "en": "línjū",
+      "jp": "邻居",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "42",
+      "en": "zhíyè",
+      "jp": "职业",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "43",
+      "en": "xuésheng",
+      "jp": "学生",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "44",
+      "en": "lǎoshī",
+      "jp": "老师",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "45",
+      "en": "xiàozhǎng",
+      "jp": "校长",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "46",
+      "en": "jiàoshòu",
+      "jp": "教授",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "47",
+      "en": "bóshì",
+      "jp": "博士",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "48",
+      "en": "shuòshì",
+      "jp": "硕士",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "49",
+      "en": "yánjiūshēng",
+      "jp": "研究生",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "50",
+      "en": "shīfu",
+      "jp": "师傅",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "51",
+      "en": "sījī",
+      "jp": "司机",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "52",
+      "en": "yīshēng",
+      "jp": "医生",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "53",
+      "en": "dàfū",
+      "jp": "大夫",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "54",
+      "en": "hùshi",
+      "jp": "护士",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "55",
+      "en": "lǜshī",
+      "jp": "律师",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "56",
+      "en": "jǐngchá",
+      "jp": "警察",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "57",
+      "en": "fúwùyuán",
+      "jp": "服务员",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "58",
+      "en": "shòuhuòyuán",
+      "jp": "售货员",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "59",
+      "en": "dǎoyóu",
+      "jp": "导游",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "60",
+      "en": "jìzhě",
+      "jp": "记者",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "61",
+      "en": "zuòzhě",
+      "jp": "作者",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "62",
+      "en": "yǎnyuán",
+      "jp": "演员",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "63",
+      "en": "kèrén",
+      "jp": "客人",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "64",
+      "en": "gùkè",
+      "jp": "顾客",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "65",
+      "en": "guānzhòng",
+      "jp": "观众",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "66",
+      "en": "chéngwéi",
+      "jp": "成为",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "67",
+      "en": "shēntǐ",
+      "jp": "身体",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "68",
+      "en": "liǎn",
+      "jp": "脸",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "69",
+      "en": "ěrduo",
+      "jp": "耳朵",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "70",
+      "en": "yǎnjīng",
+      "jp": "眼睛",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "71",
+      "en": "bízi",
+      "jp": "鼻子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "72",
+      "en": "zuǐ",
+      "jp": "嘴",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "73",
+      "en": "dùzi",
+      "jp": "肚子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "74",
+      "en": "tuǐ",
+      "jp": "腿",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "75",
+      "en": "jiǎo",
+      "jp": "脚",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "76",
+      "en": "tóufa",
+      "jp": "头发",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "77",
+      "en": "pífū",
+      "jp": "皮肤",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "78",
+      "en": "xuè",
+      "jp": "血",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "79",
+      "en": "hàn",
+      "jp": "汗",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "80",
+      "en": "shēngyīn",
+      "jp": "声音",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "81",
+      "en": "gèzi",
+      "jp": "个子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "82",
+      "en": "tàidu",
+      "jp": "态度",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "83",
+      "en": "yàngzi",
+      "jp": "样子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "84",
+      "en": "piàoliang",
+      "jp": "漂亮",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "85",
+      "en": "měilì",
+      "jp": "美丽",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "86",
+      "en": "kěài",
+      "jp": "可爱",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "87",
+      "en": "shuài",
+      "jp": "帅",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "88",
+      "en": "niánqīng",
+      "jp": "年轻",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "89",
+      "en": "ǎi",
+      "jp": "矮",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "90",
+      "en": "pàng",
+      "jp": "胖",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "91",
+      "en": "shòu",
+      "jp": "瘦",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "92",
+      "en": "jiǎnféi",
+      "jp": "减肥",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "93",
+      "en": "fù",
+      "jp": "富",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "94",
+      "en": "qióng",
+      "jp": "穷",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "95",
+      "en": "jiànkāng",
+      "jp": "健康",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "96",
+      "en": "shēngbìng",
+      "jp": "生病",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "97",
+      "en": "yào",
+      "jp": "药",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "98",
+      "en": "gǎnmào",
+      "jp": "感冒",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "99",
+      "en": "huāyuán",
+      "jp": "花园",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "100",
+      "en": "késou",
+      "jp": "咳嗽",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "101",
+      "en": "fāshāo",
+      "jp": "发烧",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "102",
+      "en": "dǎzhēn",
+      "jp": "打针",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "103",
+      "en": "téng",
+      "jp": "疼",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "104",
+      "en": "xìnggé",
+      "jp": "性格",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "105",
+      "en": "píqi",
+      "jp": "脾气",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "106",
+      "en": "cōngming",
+      "jp": "聪明",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "107",
+      "en": "běn",
+      "jp": "本",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "108",
+      "en": "yōuxiù",
+      "jp": "优秀",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "109",
+      "en": "lǐmào",
+      "jp": "礼貌",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "110",
+      "en": "chéngshí",
+      "jp": "诚实",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "111",
+      "en": "rènzhēn",
+      "jp": "认真",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "112",
+      "en": "chéngshú",
+      "jp": "成熟",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "113",
+      "en": "huópo",
+      "jp": "活泼",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "114",
+      "en": "jījí",
+      "jp": "积极",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "115",
+      "en": "zhǔdòng",
+      "jp": "主动",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "116",
+      "en": "yǒnggǎn",
+      "jp": "勇敢",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "117",
+      "en": "yōumò",
+      "jp": "幽默",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "118",
+      "en": "lěngjìng",
+      "jp": "冷静",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "119",
+      "en": "nàixīn",
+      "jp": "耐心",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "120",
+      "en": "yángé",
+      "jp": "严格",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "121",
+      "en": "cūxīn",
+      "jp": "粗心",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "122",
+      "en": "mǎhu",
+      "jp": "马虎",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "123",
+      "en": "lǎn",
+      "jp": "懒",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "124",
+      "en": "zhīshi",
+      "jp": "知识",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "125",
+      "en": "yìsi",
+      "jp": "意思",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "126",
+      "en": "kànfǎ",
+      "jp": "看法",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "127",
+      "en": "yìjiàn",
+      "jp": "意见",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "128",
+      "en": "zhǔyi",
+      "jp": "主意",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "129",
+      "en": "jīngyàn",
+      "jp": "经验",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "130",
+      "en": "jīnglǐ",
+      "jp": "经理",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "131",
+      "en": "jīngshén",
+      "jp": "精神",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "132",
+      "en": "nénglì",
+      "jp": "能力",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "133",
+      "en": "lìqì",
+      "jp": "力气",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "134",
+      "en": "xìnxīn",
+      "jp": "信心",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "135",
+      "en": "yìnxiàng",
+      "jp": "印象",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "136",
+      "en": "rènshi",
+      "jp": "认识",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "137",
+      "en": "zhīdào",
+      "jp": "知道",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "138",
+      "en": "shúxī",
+      "jp": "熟悉",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "139",
+      "en": "liǎojiě",
+      "jp": "了解",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "140",
+      "en": "lǐjiě",
+      "jp": "理解",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "141",
+      "en": "dǒng",
+      "jp": "懂",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "142",
+      "en": "míngbai",
+      "jp": "明白",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "143",
+      "en": "qīngchu",
+      "jp": "清楚",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "144",
+      "en": "wùhuì",
+      "jp": "误会",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "145",
+      "en": "juéde",
+      "jp": "觉得",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "146",
+      "en": "rènwéi",
+      "jp": "认为",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "147",
+      "en": "yǐwéi",
+      "jp": "以为",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "148",
+      "en": "gǎnjué",
+      "jp": "感觉",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "149",
+      "en": "kǎolǜ",
+      "jp": "考虑",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "150",
+      "en": "jìde",
+      "jp": "记得",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "151",
+      "en": "wàngjì",
+      "jp": "忘记",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "152",
+      "en": "huíyì",
+      "jp": "回忆",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "153",
+      "en": "chénggōng",
+      "jp": "成功",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "154",
+      "en": "shībài",
+      "jp": "失败",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "155",
+      "en": "pànduàn",
+      "jp": "判断",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "156",
+      "en": "pīpíng",
+      "jp": "批评",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "157",
+      "en": "biǎoyáng",
+      "jp": "表扬",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "158",
+      "en": "àiqíng",
+      "jp": "爱情",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "159",
+      "en": "gǎnqíng",
+      "jp": "感情",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "160",
+      "en": "xīnqíng",
+      "jp": "心情",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "161",
+      "en": "xìngfú",
+      "jp": "幸福",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "162",
+      "en": "lǐxiǎng",
+      "jp": "理想",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "163",
+      "en": "mèng",
+      "jp": "梦",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "164",
+      "en": "xiào",
+      "jp": "笑",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "165",
+      "en": "kū",
+      "jp": "哭",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "166",
+      "en": "liúlèi",
+      "jp": "流泪",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "167",
+      "en": "gāoxìng",
+      "jp": "高兴",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "168",
+      "en": "kuàilè",
+      "jp": "快乐",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "169",
+      "en": "yúkuài",
+      "jp": "愉快",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "170",
+      "en": "yǒuqù",
+      "jp": "有趣",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "171",
+      "en": "wúliáo",
+      "jp": "无聊",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "172",
+      "en": "shūfu",
+      "jp": "舒服",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "173",
+      "en": "fāngbiàn",
+      "jp": "方便",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "174",
+      "en": "suíbiàn",
+      "jp": "随便",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "175",
+      "en": "qīngsōng",
+      "jp": "轻松",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "176",
+      "en": "jǐnzhāng",
+      "jp": "紧张",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "177",
+      "en": "yālì",
+      "jp": "压力",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "178",
+      "en": "nánguò",
+      "jp": "难过",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "179",
+      "en": "nánshòu",
+      "jp": "难受",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "180",
+      "en": "shāngxīn",
+      "jp": "伤心",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "181",
+      "en": "shòubùliǎo",
+      "jp": "受不了",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "182",
+      "en": "gūdān",
+      "jp": "孤单",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "183",
+      "en": "hàixiū",
+      "jp": "害羞",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "184",
+      "en": "gǎndòng",
+      "jp": "感动",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "185",
+      "en": "jīdòng",
+      "jp": "激动",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "186",
+      "en": "xīngfèn",
+      "jp": "兴奋",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "187",
+      "en": "juédìng",
+      "jp": "决定",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "188",
+      "en": "jiānchí",
+      "jp": "坚持",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "189",
+      "en": "fàngqì",
+      "jp": "放弃",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "190",
+      "en": "hòuhuǐ",
+      "jp": "后悔",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "191",
+      "en": "zhíde",
+      "jp": "值得",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    }
+  ]
+}

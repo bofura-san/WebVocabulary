@@ -1,0 +1,802 @@
+{
+  "generatedAt": "2026-03-21T14:40:33.678Z",
+  "sheetId": "1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow",
+  "gid": "182101214",
+  "name": "韓国語",
+  "hash": "cf4bb3ae7600b55a5b6c417506cac822bf38a5a35895392aecadfdf3fcd776b1",
+  "itemCount": 99,
+  "items": [
+    {
+      "id": "1",
+      "en": "삼월",
+      "jp": "三月",
+      "pos": "形容詞",
+      "exampleEn": "Kasumi:\nYou know, you’re kind of revered by everyone else.\nBut to me, you’re just Elizabeth.\n\nElizabeth:\nGood. I’d hate to be revered by you.\nThat sounds exhausting.",
+      "exampleJp": "카스미:\n있잖아요, 다른 사람들은 당신을 존경하는 것 같아요.\n\n하지만 저한테는 그냥 엘리자베스일 뿐이에요.\n\n엘리자베스:\n좋아요. 당신한테 존경받는 건 싫어요.\n너무 피곤할 것 같거든요."
+    },
+    {
+      "id": "2",
+      "en": "생신",
+      "jp": "生身",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "3",
+      "en": "달",
+      "jp": "月",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "4",
+      "en": "밤",
+      "jp": "夜",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "5",
+      "en": "기차",
+      "jp": "電車",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "6",
+      "en": "윷놀이",
+      "jp": "ユンノリ（遊び）",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "7",
+      "en": "늦었어요",
+      "jp": "遅れました。",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "8",
+      "en": "수요일",
+      "jp": "水曜日",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "9",
+      "en": "떡",
+      "jp": "餅",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "10",
+      "en": "시장",
+      "jp": "市場",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "11",
+      "en": "만들어요",
+      "jp": "作る",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "12",
+      "en": "날",
+      "jp": "私",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "13",
+      "en": "언니",
+      "jp": "姉",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "14",
+      "en": "한복",
+      "jp": "韓服",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "15",
+      "en": "받아요",
+      "jp": "受け取る",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "16",
+      "en": "댁",
+      "jp": "お宅",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "17",
+      "en": "추석",
+      "jp": "チュソク",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "18",
+      "en": "언제",
+      "jp": "いつ",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "19",
+      "en": "다음",
+      "jp": "次",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "20",
+      "en": "주",
+      "jp": "週",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "21",
+      "en": "할머니",
+      "jp": "おばあちゃん",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "22",
+      "en": "저쪽",
+      "jp": "向こう",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "23",
+      "en": "서류",
+      "jp": "書類",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "24",
+      "en": "수고하셨습니다",
+      "jp": "お疲れ様でした",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "25",
+      "en": "확인하다",
+      "jp": "確認する",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "26",
+      "en": "층",
+      "jp": "フロア",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "27",
+      "en": "오른쪽",
+      "jp": "右",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "28",
+      "en": "밖",
+      "jp": "外",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "29",
+      "en": "위",
+      "jp": "上",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "30",
+      "en": "사무실",
+      "jp": "オフィス",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "31",
+      "en": "부장님",
+      "jp": "部長",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "32",
+      "en": "올라가요",
+      "jp": "上がります",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "33",
+      "en": "으로",
+      "jp": "によって",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "34",
+      "en": "사진",
+      "jp": "写真",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "35",
+      "en": "이름",
+      "jp": "名前",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "36",
+      "en": "찍어요",
+      "jp": "撮る",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "37",
+      "en": "메시지",
+      "jp": "メッセージ",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "38",
+      "en": "회사",
+      "jp": "会社",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "39",
+      "en": "주소",
+      "jp": "住所",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "40",
+      "en": "보내요",
+      "jp": "送る",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "41",
+      "en": "따뜻하게",
+      "jp": "暖かく",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "42",
+      "en": "젖어요",
+      "jp": "濡れて",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "43",
+      "en": "이쪽",
+      "jp": "こちら",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "44",
+      "en": "천천히",
+      "jp": "ゆっくり",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "45",
+      "en": "걸어요",
+      "jp": "歩く",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "46",
+      "en": "문",
+      "jp": "ドア",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "47",
+      "en": "열쇠",
+      "jp": "鍵",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "48",
+      "en": "닫아요",
+      "jp": "閉じる",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "49",
+      "en": "넣어요",
+      "jp": "入れます",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "50",
+      "en": "먼저",
+      "jp": "まず",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "51",
+      "en": "비누",
+      "jp": "石鹸",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "52",
+      "en": "깨끗이",
+      "jp": "きれいに",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "53",
+      "en": "수영장",
+      "jp": "プール",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "54",
+      "en": "할아버지",
+      "jp": "おじいちゃん",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "55",
+      "en": "줘요",
+      "jp": "与える",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "56",
+      "en": "운전해요",
+      "jp": "運転します。",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "57",
+      "en": "더워요",
+      "jp": "暑い",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "58",
+      "en": "편하게",
+      "jp": "楽に",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "59",
+      "en": "너무",
+      "jp": "あまり",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "60",
+      "en": "꼭",
+      "jp": "ぜひ",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "61",
+      "en": "바로",
+      "jp": "まさに",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "62",
+      "en": "노트북",
+      "jp": "ノートパソコン",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "63",
+      "en": "보통",
+      "jp": "通常",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "64",
+      "en": "테이블",
+      "jp": "テーブル",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "65",
+      "en": "침대",
+      "jp": "ベッド",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "66",
+      "en": "바지",
+      "jp": "パンツ",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "67",
+      "en": "친절히",
+      "jp": "親切に",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "68",
+      "en": "잘",
+      "jp": "よく",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "69",
+      "en": "어울려요",
+      "jp": "似合う",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "70",
+      "en": "알려줘",
+      "jp": "教えてください",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "71",
+      "en": "간단히",
+      "jp": "単に",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "72",
+      "en": "특별히",
+      "jp": "特に",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "73",
+      "en": "백화점",
+      "jp": "デパート",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "74",
+      "en": "모자",
+      "jp": "帽子",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "75",
+      "en": "옷",
+      "jp": "服",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "76",
+      "en": "별로",
+      "jp": "あまり",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "77",
+      "en": "또",
+      "jp": "また",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "78",
+      "en": "기숙사",
+      "jp": "寮",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "79",
+      "en": "세탁기",
+      "jp": "洗濯機",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "80",
+      "en": "편의점",
+      "jp": "コンビニ",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "81",
+      "en": "데이트",
+      "jp": "デート",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "82",
+      "en": "운동장",
+      "jp": "運動場",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "83",
+      "en": "남자 친구",
+      "jp": "彼氏",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "84",
+      "en": "시간",
+      "jp": "時間",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "85",
+      "en": "수업",
+      "jp": "クラス",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "86",
+      "en": "숙제",
+      "jp": "宿題",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "87",
+      "en": "전공",
+      "jp": "専攻",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "88",
+      "en": "없다",
+      "jp": "ない",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "89",
+      "en": "학교",
+      "jp": "学校",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "90",
+      "en": "많이",
+      "jp": "たくさん",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "91",
+      "en": "동아리",
+      "jp": "サークル",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "92",
+      "en": "테니스",
+      "jp": "テニス",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "93",
+      "en": "음악",
+      "jp": "音楽",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "94",
+      "en": "딸",
+      "jp": "娘",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "95",
+      "en": "대학생",
+      "jp": "大学生",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "96",
+      "en": "있다",
+      "jp": "ある",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "97",
+      "en": "약사",
+      "jp": "薬剤師",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "98",
+      "en": "약국",
+      "jp": "薬局",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "99",
+      "en": "먹다",
+      "jp": "食べる",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    }
+  ]
+}
