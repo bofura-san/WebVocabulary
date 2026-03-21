@@ -1,0 +1,666 @@
+{
+  "generatedAt": "2026-03-21T15:02:11.537Z",
+  "sheetId": "1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow",
+  "gid": "743650624",
+  "name": "英語",
+  "hash": "08f4e7f06702ef6bfc420d0df0aadc1e459a28f94e7b071b632958427768d46c",
+  "itemCount": 82,
+  "items": [
+    {
+      "id": "1",
+      "en": "revered",
+      "jp": "尊敬されている",
+      "pos": "形容詞",
+      "exampleEn": "Kasumi:\nYou know, you’re kind of revered by everyone else.\nBut to me, you’re just Elizabeth.\n\nElizabeth:\nGood. I’d hate to be revered by you.\nThat sounds exhausting.",
+      "exampleJp": "カスミ：ねえ、みんなに尊敬されてるみたいだけど、私にとってはただのエリザベスだよ\n\nエリザベス：\nよかった。あなたに尊敬されるなんて考えただけでも疲れるわ"
+    },
+    {
+      "id": "2",
+      "en": "footnote",
+      "jp": "脚注",
+      "pos": "名詞",
+      "exampleEn": "Kasumi:\n\nWhat’s a footnote?\nLike… a footprint?\n\nElizabeth:\n\nIf my life were a book,\nthere’d be a little mark next to your name,\nand at the bottom it would say, 'friend.'\n\nKasumi:\n\nFriend?\nYou mean best friend, right?",
+      "exampleJp": "カスミ：footnoteってなに？　足跡？\nエリザベス：例えば私の人生を本にしたら、あなたの名前に印がついて「友達」って書かれるの。それよ。 \nカスミ：友達？　親友の間違いだよね？"
+    },
+    {
+      "id": "3",
+      "en": "inherit",
+      "jp": "継承する",
+      "pos": "動詞",
+      "exampleEn": "Kasumi:\nInherit… like names or property?\n\nElizabeth:\nYes.\nBut also things like talent, habits, or personality.",
+      "exampleJp": "カスミ：継ぐって、名前とか財産とか？\nエリザベス：ええ。それだけじゃなくて、才能とか性格とかもね。"
+    },
+    {
+      "id": "4",
+      "en": "stiff",
+      "jp": "硬い",
+      "pos": "形容詞",
+      "exampleEn": "Kasumi:\nSo… stiff isn’t exactly the same as hard or rigid?\n\nElizabeth:\nNot really.\nIt’s more like… awkward. A bit tense. Like things aren’t flowing naturally yet.\nWe were like that at first, remember?\n\nKasumi:\nWere we?\nI don’t know… it feels like you were already the same back then, Liz.\n\nElizabeth:\n…Yeah?",
+      "exampleJp": "かすみ：硬い…って、固いとか硬直してるってこと？\n\nエリザベス：ちょっと違うわ。硬いというのは、物事の感じ方に関する表現よ——不自然に張り詰めていたり、ぎこちなかったりする状態。私たちも最初、そうだったでしょう？\n\nかすみ：そんなんだったっけ？　リズ、最初から変わってなかった気がするけど。\n\nエリザベス：……そう？"
+    },
+    {
+      "id": "5",
+      "en": "bear",
+      "jp": "耐える",
+      "pos": "動詞句",
+      "exampleEn": "Kasumi:\nStudying for this test is killing me. I can barely bear it.\n\nElizabeth:\nBear it. Joy exists only beyond that point.",
+      "exampleJp": "カスミ：テスト勉強が辛くて死にそうだよ\nエリザベス：耐えなさい。喜びはその先にしかないわ」"
+    },
+    {
+      "id": "6",
+      "en": "vocally",
+      "jp": "声に出して",
+      "pos": "副詞",
+      "exampleEn": "Kasumi:\nYou don’t have to say it vocally.\nI already know how you feel.\n\nElizabeth:\nGood.\nBut just in case, I’ll say it vocally.—could you go shopping for me?\n\nKasumi:\nHey, wait a second!",
+      "exampleJp": "カスミ：わざわざ声にしなくても、あなたの気持ち伝わってるよ。\nエリザベス：よかった。でも念の為、声に出して言っておくわね。買い物お願い。\nカスミ：ちょっと待ってよ！"
+    },
+    {
+      "id": "7",
+      "en": "demotivate",
+      "jp": "やる気をなくさせる",
+      "pos": "動詞",
+      "exampleEn": "Elizabeth:\nKasumi, have you finished your report?\n\nKasumi:\nI was about to start,\nbut you totally demotivated me.\n\nElizabeth:\nYou really have an answer for everything.",
+      "exampleJp": "エリザベス：カスミ、もうレポート終わった？\nカスミ：いまやろうとしてたのに、あなたのせいでやる気なくなった～\nエリザベス：ああ言えばこう言うんだから"
+    },
+    {
+      "id": "8",
+      "en": "stiffen",
+      "jp": "硬くする",
+      "pos": "動詞",
+      "exampleEn": "Kasumi:\r\nWhy did you suddenly go quiet?\r\n\r\nElizabeth:\r\n…I stiffened a little when you grabbed my hand.\r\nI wasn’t ready.\r\n\r\nKasumi:\r\nOh.\r\nThen I’ll wait until you don’t stiffen anymore.",
+      "exampleJp": "カスミ：どうして急に黙っちゃったの？\r\nエリザベス：……あなたが手を掴んだとき、ちょっとこわばっちゃったの。心の準備ができてなかった\r\nカスミ：そっか。じゃあ、こわばらなくなるまで待つね"
+    },
+    {
+      "id": "9",
+      "en": "intention",
+      "jp": "意図",
+      "pos": "名詞",
+      "exampleEn": "Elizabeth:\nWhat was your intention when you came this close?\n\nKasumi:\nI didn’t mean it like that.\nI just wanted to be near you.\n\nElizabeth:\nThat still means you had an intention.",
+      "exampleJp": "エリザベス：こんなに近づいたの、どういうつもり？\nカスミ：そんなつもりはなかったよ。ただ、そばにいたかっただけ\nエリザベス：それって、意図があったっていうのよ"
+    },
+    {
+      "id": "10",
+      "en": "dwell",
+      "jp": "住む",
+      "pos": "動詞",
+      "exampleEn": "Kasumi:\nHow long have we lived here again?\n\nElizabeth:\nLong enough that I don’t just live here anymore.I dwell here.\n\nKasumi:\nI mean, I’m really happy to hear that…but I was just asking casually.",
+      "exampleJp": "カスミ：ここに住んでどのくらいだっけ？\nエリザベス：もう、ただ住んでるだけじゃないくらいにはね\nカスミ：すごく嬉しいけどさ……ほんとに軽い気持ちで聞いただけなんだよね"
+    },
+    {
+      "id": "11",
+      "en": "fawn",
+      "jp": "媚びへつらう",
+      "pos": "動詞",
+      "exampleEn": "Elizabeth:\nKasumi, you don’t have to fawn over me.\n\nKasumi:\nI just want you to have fun, feel good,\nlive here comfortably,\nand maybe be a little kinder to me.\nThat’s all.\n\nElizabeth:\nThat’s what fawning is.\nDon’t overdo it—just be yourself.",
+      "exampleJp": "エリザベス：そんなに私に媚びなくていいのよ\nカスミ：あなたに楽しい気分でいてほしくて、気持ちよくなってもらって、ここで快適に暮らしてほしくて、それで、ちょっと私に優しくしてほしいだけなんだよ\nエリザベス：それを媚びてるって言うのよ。変に空回りしないで、そのままでいて"
+    },
+    {
+      "id": "12",
+      "en": "distract",
+      "jp": "気を散らす",
+      "pos": "動詞",
+      "exampleEn": "Elizabeth:\n\nKasumi, try to focus.\n\n\nKasumi:\n\nI can’t.\nYou’re distracting me.\n\n\nElizabeth:\nOh, so now you finally understand\nwhat I’ve been dealing with all this time.",
+      "exampleJp": "エリザベス：カスミ、集中しなさい\nカスミ：無理だよ。あなたが気になって集中できない\nエリザベス：ああ、やっと私がこれまで何に困っていたか、あなたもわかってくれたのね"
+    },
+    {
+      "id": "13",
+      "en": "celibacy",
+      "jp": "独身",
+      "pos": "名詞",
+      "exampleEn": "Kasumi:\nYour aunt is single, right?\n\n\nElizabeth:\nShe’s not just single.\nShe’s chosen celibacy.\n\nKasumi:\nOh… so being single just happens,\nbut celibacy is a decision.",
+      "exampleJp": "カスミ：エリザベスの叔母さんって独身なんだよね？\nエリザベス：ただの独身じゃないの。独身でいること自体を選んでるのよ\nカスミ：そっか……独身は結果で、celibacy は決断なんだ"
+    },
+    {
+      "id": "14",
+      "en": "abstain",
+      "jp": "棄権する/自生する",
+      "pos": "動詞",
+      "exampleEn": "Elizabeth:\nShe said she quit drinking.\nLooks like she finally decided to abstain.\n\nKasumi:\nWait—did you just say she abstained from alcohol?\nLike… she withdrew?\n\nElizabeth:\nMm… if you mean withdrawal, as in having withdrawal symptoms, then maybe.\nBut the abstain I meant was ’self-control.",
+      "exampleJp": "エリザベス：あの子、お酒やめたって。やっと決めたのね。\nカスミ：ちょっと待って、今お酒を棄権した……辞退したって言った？\nエリザベス：んー、禁断症状があるって意味の withdrawal なら、そうかもね。\nでも私が言った abstain は「自制した」って意味よ"
+    },
+    {
+      "id": "15",
+      "en": "fluster",
+      "jp": "慌てふためく",
+      "pos": "動詞",
+      "exampleEn": "Kasumi:\nYou keep saying things like that out of nowhere.\nYou’re really trying to fluster me, aren’t you?\n\nElizabeth:\nNot intentionally.\nBut if I can fluster you that easily, it may become the greatest achievement of my life.\n\nKasumi:\nThat’s exactly the kind of thing that flusters me!",
+      "exampleJp": "カスミ：そうやって急にそんなこと言うんだもん。\n私を動揺させる気でしょ？\n\nエリザベス：わざとじゃないわ。\nでもそんなに簡単にあなたを動揺させられるなら、それは私の人生一の快挙かもしれないわね。\n\nカスミ：そういうこと言うから動揺するの！"
+    },
+    {
+      "id": "16",
+      "en": "bosom",
+      "jp": "胸",
+      "pos": "名詞",
+      "exampleEn": "Kasumi:\nSo bosom means “chest,” right?\nIs it basically the same as chest or bust?\n\nElizabeth:\nNot quite.\nChest is the general, neutral word.\nBust is about a woman’s breasts or bust size.\nBut bosom is softer and more literary—it can mean the chest, but also someone’s inner feelings.\n\nKasumi:\nOh… so if you say bosom,\nit sounds less like anatomy and more like feelings.",
+      "exampleJp": "カスミ：\nじゃあ bosom って「胸」なんだよね？\nchest とか bust と、だいたい同じってこと？\n\nエリザベス：\n少し違うわ。\nchest はいちばん一般的で中立的な言い方。\nbust は女性の胸やバストサイズの話。\nでも bosom はもっとやわらかくて文語的で、胸そのものだけじゃなくて胸の内、感情まで含められるの。\n\nカスミ：\nあー……じゃあ bosom って言うと、\n体の話というより気持ちの話っぽくなるんだ。"
+    },
+    {
+      "id": "",
+      "en": "apothecary",
+      "jp": "薬剤師",
+      "pos": "名詞",
+      "exampleEn": "Kasumi:\nApothecary sounds kind of cool.\nIs it just an old-fashioned word for a pharmacy?\n\nElizabeth:\nMore or less.\nAn apothecary was someone who prepared and sold medicine, especially in older times.\nIt sounds much more old-world than pharmacy.\n\nKasumi:\nSo if I call a normal drugstore an apothecary,\nI sound less sick and more like I’m in a fantasy novel.",
+      "exampleJp": "カスミ：\napothecary って、なんだかかっこいいね。\n要するに、pharmacy の古い言い方ってこと？\n\nエリザベス：\nだいたいそうね。\napothecary は、特に昔の時代に薬を調合して売る人のこと。\npharmacy より、ずっと古風な響きがあるわ。\n\nカスミ：\nじゃあ普通のドラッグストアを apothecary って呼んだら、\n病気っていうよりファンタジー世界の住人っぽくなるんだね。"
+    },
+    {
+      "id": "",
+      "en": "exasperated",
+      "jp": "苛立ち",
+      "pos": "",
+      "exampleEn": "Elizabeth:\nYou look exasperated.\nDid the printer break again?\n\nKasumi:\nNo, worse.\nIt started working the moment I asked you for help.\n\nElizabeth:\nAh.\nSo you’re not angry—just exasperated by the timing.",
+      "exampleJp": "エリザベス：\nなんだかうんざりしてる顔してるわね。\nまたプリンター壊れたの？\n\nカスミ：\nううん、もっとひどい。\nあなたに助けを求めた瞬間に直ったの。\n\nエリザベス：\nああ。\nつまり怒ってるんじゃなくて、そのタイミングにうんざりしてるのね。"
+    },
+    {
+      "id": "",
+      "en": "composure",
+      "jp": "落ち着き",
+      "pos": "",
+      "exampleEn": "Kasumi:\nHow do you stay so calm all the time?\nDo you just naturally have composure?\n\nElizabeth:\nNot naturally.\nComposure is what you keep when you want to panic, but choose not to.\n\nKasumi:\nThen what do you call someone like me,\nwho panics even when there’s no reason to?\n\nElizabeth:\nPrecious to me, unfortunately.\nThat’s why I can’t ignore it.",
+      "exampleJp": "カスミ：\nどうしていつもそんなに落ち着いていられるの？\nやっぱり生まれつき composure があるの？\n\nエリザベス：\n生まれつきじゃないわ。\ncomposure って、慌てたくなっても慌てないでいられることよ。\n\nカスミ：\nじゃあ、慌てる必要もないのに慌てる私って、なんていうの？\n\nエリザベス：\n困ったことに、私にとって大事な人ね。\nだから放っておけないのよ。"
+    },
+    {
+      "id": "",
+      "en": "inebriation",
+      "jp": "酩酊",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "accordance",
+      "jp": "準拠",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "lithe",
+      "jp": "しなやかな",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "concubine",
+      "jp": "側室",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "linger",
+      "jp": "長居する",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "deficiency",
+      "jp": "欠乏",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "intimacy",
+      "jp": "親密",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "fruitition",
+      "jp": "成就",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "conception vessel",
+      "jp": "受胎器",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "medical tractate",
+      "jp": "医学論文",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "frivolous",
+      "jp": "軽薄",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "cultivators",
+      "jp": "栽培者",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "profusely",
+      "jp": "大量に",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "concoction",
+      "jp": "調合",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "ointment",
+      "jp": "軟膏",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "apprentice",
+      "jp": "見習い",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "lass",
+      "jp": "少女",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "outshine",
+      "jp": "凌駕する",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "exacerbated",
+      "jp": "悪化した",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "devoid",
+      "jp": "欠如",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "improper",
+      "jp": "不適切な",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "stratagems",
+      "jp": "策略",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "epitome of ripe",
+      "jp": "熟したの典型",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "captivate",
+      "jp": "魅了する",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "profound",
+      "jp": "深い",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "condolence",
+      "jp": "お悔やみ",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "imminent",
+      "jp": "差し迫った",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "disgrace",
+      "jp": "恥辱",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "seductive",
+      "jp": "魅惑的",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "mourn",
+      "jp": "悲しむ",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "loins",
+      "jp": "腰肉",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "sheath",
+      "jp": "シース",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "contagious",
+      "jp": "伝染性の",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "deity",
+      "jp": "神",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "tantalizing",
+      "jp": "魅惑的",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "pert nipples",
+      "jp": "ピンと張った乳首",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "roil",
+      "jp": "渦巻く",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "covet",
+      "jp": "欲しがる",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "eunuch",
+      "jp": "宦官",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "pious",
+      "jp": "敬虔な",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "impale",
+      "jp": "串刺し",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "procession",
+      "jp": "行列",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "incessantly",
+      "jp": "絶え間なく",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "fanfare",
+      "jp": "ファンファーレ",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "intricate",
+      "jp": "複雑な",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "sedan",
+      "jp": "セダン",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "splendor",
+      "jp": "壮麗さ",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "comparison",
+      "jp": "比較",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "treason",
+      "jp": "反逆",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "embellishing",
+      "jp": "装飾する",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "contender",
+      "jp": "候補者",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "kowtow",
+      "jp": "土下座する",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "indignance",
+      "jp": "憤慨",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "renounce",
+      "jp": "放棄する",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "audicity",
+      "jp": "聴覚",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "insolence",
+      "jp": "傲慢",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "abide",
+      "jp": "従う",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "carnal",
+      "jp": "肉欲的",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "subpar",
+      "jp": "劣悪",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "adorn",
+      "jp": "飾る",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "imped",
+      "jp": "妨げられた",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "anticipate",
+      "jp": "予想する",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "vigorously",
+      "jp": "精力的に",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    }
+  ]
+}
