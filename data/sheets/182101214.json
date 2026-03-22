@@ -1,13 +1,9 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2026-03-21T14:40:33.678Z",
-=======
-  "generatedAt": "2026-03-21T15:02:11.537Z",
->>>>>>> 6f9f2402331e7834b0fad9d64f101b5a93d9cc02
+  "generatedAt": "2026-03-22T16:19:28.632Z",
   "sheetId": "1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow",
   "gid": "182101214",
   "name": "韓国語",
-  "hash": "cf4bb3ae7600b55a5b6c417506cac822bf38a5a35895392aecadfdf3fcd776b1",
+  "hash": "6b390e7c48b82f89af6992577b3ed7e0542546b83453e45aa9a9fd18608e79ba",
   "itemCount": 99,
   "items": [
     {
@@ -157,7 +153,7 @@
     {
       "id": "19",
       "en": "다음",
-      "jp": "次",
+      "jp": "次へ",
       "pos": "",
       "exampleEn": "",
       "exampleJp": ""
@@ -573,7 +569,7 @@
     {
       "id": "71",
       "en": "간단히",
-      "jp": "単に",
+      "jp": "簡単に",
       "pos": "",
       "exampleEn": "",
       "exampleJp": ""
