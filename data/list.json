@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2026-03-21T14:40:33.678Z",
-=======
-  "generatedAt": "2026-03-21T15:02:11.537Z",
->>>>>>> 6f9f2402331e7834b0fad9d64f101b5a93d9cc02
+  "generatedAt": "2026-03-22T16:19:28.632Z",
   "sheetId": "1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow",
   "defaultGid": "743650624",
   "listGid": "1137954113",
@@ -11,68 +7,51 @@
     {
       "name": "英語",
       "gid": "743650624",
-      "hash": "08f4e7f06702ef6bfc420d0df0aadc1e459a28f94e7b071b632958427768d46c",
+      "hash": "829063965971b411162ed344779a2ae4357c63ba00ddad038dea0ea47d1f0c17",
       "itemCount": 82,
-<<<<<<< HEAD
-      "updatedAt": "2026-03-21T14:40:33.678Z"
-=======
-      "updatedAt": "2026-03-21T15:02:11.537Z"
->>>>>>> 6f9f2402331e7834b0fad9d64f101b5a93d9cc02
+      "updatedAt": "2026-03-22T16:19:28.632Z"
+    },
+    {
+      "name": "Fourthwing",
+      "gid": "109584225",
+      "hash": "ee68c0665f2eb7b11debf26c94a8207c0686a441c91098ce1914b56787cb850f",
+      "itemCount": 72,
+      "updatedAt": "2026-03-22T16:19:28.632Z"
     },
     {
       "name": "韓国語",
       "gid": "182101214",
-      "hash": "cf4bb3ae7600b55a5b6c417506cac822bf38a5a35895392aecadfdf3fcd776b1",
+      "hash": "6b390e7c48b82f89af6992577b3ed7e0542546b83453e45aa9a9fd18608e79ba",
       "itemCount": 99,
-<<<<<<< HEAD
-      "updatedAt": "2026-03-21T14:40:33.678Z"
-=======
-      "updatedAt": "2026-03-21T15:02:11.537Z"
->>>>>>> 6f9f2402331e7834b0fad9d64f101b5a93d9cc02
+      "updatedAt": "2026-03-22T16:19:28.632Z"
     },
     {
       "name": "中国語",
       "gid": "1544318464",
       "hash": "b86041f0dab52eeb0bff23ee51db50fae200d6095269d653b51a77b5b39f602c",
       "itemCount": 299,
-<<<<<<< HEAD
-      "updatedAt": "2026-03-21T14:40:33.678Z"
-=======
       "updatedAt": "2026-03-21T15:02:11.537Z"
->>>>>>> 6f9f2402331e7834b0fad9d64f101b5a93d9cc02
     },
     {
       "name": "中国語基礎1",
       "gid": "702889065",
       "hash": "cf2aacaa986ee9d675c15c128228a5464c18d0f544f9efd20dbe1d05fbb788ff",
       "itemCount": 191,
-<<<<<<< HEAD
-      "updatedAt": "2026-03-21T14:40:33.678Z"
-=======
       "updatedAt": "2026-03-21T15:02:11.537Z"
->>>>>>> 6f9f2402331e7834b0fad9d64f101b5a93d9cc02
     },
     {
       "name": "中国語基礎2",
       "gid": "395125763",
       "hash": "ad96b2fe1fa3619b0299d71beaac8e4d8c80671d83a3788b96abc6d01320050f",
       "itemCount": 197,
-<<<<<<< HEAD
-      "updatedAt": "2026-03-21T14:40:33.678Z"
-=======
       "updatedAt": "2026-03-21T15:02:11.537Z"
->>>>>>> 6f9f2402331e7834b0fad9d64f101b5a93d9cc02
     },
     {
       "name": "中国語基礎2",
       "gid": "639491032",
       "hash": "c5afbeb821fb33679454abdfb61c5e87f79efab7fae973b4eb1755c27fcaabd4",
       "itemCount": 199,
-<<<<<<< HEAD
-      "updatedAt": "2026-03-21T14:40:33.678Z"
-=======
-      "updatedAt": "2026-03-21T15:02:11.537Z"
->>>>>>> 6f9f2402331e7834b0fad9d64f101b5a93d9cc02
+      "updatedAt": ""
     }
   ]
 }
