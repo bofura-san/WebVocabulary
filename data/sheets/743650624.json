@@ -1,13 +1,9 @@
 {
-<<<<<<< HEAD
-  "generatedAt": "2026-03-21T14:40:33.678Z",
-=======
-  "generatedAt": "2026-03-21T15:02:11.537Z",
->>>>>>> 6f9f2402331e7834b0fad9d64f101b5a93d9cc02
+  "generatedAt": "2026-03-22T16:19:28.632Z",
   "sheetId": "1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow",
   "gid": "743650624",
   "name": "英語",
-  "hash": "08f4e7f06702ef6bfc420d0df0aadc1e459a28f94e7b071b632958427768d46c",
+  "hash": "829063965971b411162ed344779a2ae4357c63ba00ddad038dea0ea47d1f0c17",
   "itemCount": 82,
   "items": [
     {
@@ -317,7 +313,7 @@
     {
       "id": "",
       "en": "devoid",
-      "jp": "欠如",
+      "jp": "空虚",
       "pos": "",
       "exampleEn": "",
       "exampleJp": ""
@@ -621,7 +617,7 @@
     {
       "id": "",
       "en": "carnal",
-      "jp": "肉欲的",
+      "jp": "肉欲的な",
       "pos": "",
       "exampleEn": "",
       "exampleJp": ""
