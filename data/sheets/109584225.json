@@ -1,0 +1,586 @@
+{
+  "generatedAt": "2026-03-22T16:19:28.632Z",
+  "sheetId": "1AqqXZoShbq2OhnFW-lhUTlD0tIGlMPf8VNfOPcraNow",
+  "gid": "109584225",
+  "name": "Fourthwing",
+  "hash": "ee68c0665f2eb7b11debf26c94a8207c0686a441c91098ce1914b56787cb850f",
+  "itemCount": 72,
+  "items": [
+    {
+      "id": "1",
+      "en": "conscription",
+      "jp": "徴兵",
+      "pos": "形容詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "2",
+      "en": "deadliest",
+      "jp": "最も致命的な",
+      "pos": "名詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "3",
+      "en": "trudge",
+      "jp": "重い足取りで歩く",
+      "pos": "動詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "4",
+      "en": "heave",
+      "jp": "持ち上げる",
+      "pos": "形容詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "5",
+      "en": "exertion",
+      "jp": "努力",
+      "pos": "動詞句",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "6",
+      "en": "quadrant",
+      "jp": "象限",
+      "pos": "副詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "7",
+      "en": "expressionless",
+      "jp": "無表情",
+      "pos": "動詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "8",
+      "en": "infantry",
+      "jp": "歩兵",
+      "pos": "動詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "9",
+      "en": "molded",
+      "jp": "成形",
+      "pos": "名詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "10",
+      "en": "mountainous",
+      "jp": "山がちな",
+      "pos": "動詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "11",
+      "en": "muffled",
+      "jp": "くぐもった",
+      "pos": "動詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "12",
+      "en": "mortification",
+      "jp": "苦行",
+      "pos": "動詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "13",
+      "en": "admission test",
+      "jp": "入学試験",
+      "pos": "名詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "14",
+      "en": "shrug",
+      "jp": "肩をすくめる",
+      "pos": "動詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "15",
+      "en": "scoff",
+      "jp": "嘲笑",
+      "pos": "動詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "16",
+      "en": "reprieve",
+      "jp": "猶予",
+      "pos": "名詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "seethe",
+      "jp": "見る",
+      "pos": "名詞",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "immaculate",
+      "jp": "完璧",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "appraise",
+      "jp": "評価する",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "sheared",
+      "jp": "剪断された",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "arrogance",
+      "jp": "傲慢",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "unwavering conviction",
+      "jp": "揺るぎない信念",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "frail",
+      "jp": "虚弱",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "traitorous",
+      "jp": "裏切り者",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "vulnerable",
+      "jp": "脆弱",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "sconce",
+      "jp": "壁付け照明",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "braid",
+      "jp": "三つ編み",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "siphon",
+      "jp": "サイフォン",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "marrow",
+      "jp": "骨髄",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "furrow",
+      "jp": "溝",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "customary composure",
+      "jp": "いつもの落ち着き",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "parapet",
+      "jp": "手すり壁",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "tantamount",
+      "jp": "同義語",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "sprain",
+      "jp": "捻挫",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "inadequacies",
+      "jp": "不備",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "incinerate",
+      "jp": "焼却する",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "snort",
+      "jp": "鼻を鳴らす",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "compliment",
+      "jp": "褒め言葉",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "cringe",
+      "jp": "ゾッとする",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "plummet",
+      "jp": "急落",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "wield",
+      "jp": "振るう",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "signet",
+      "jp": "印章",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "retribution",
+      "jp": "報復",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "glares",
+      "jp": "睨みつける",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "posture",
+      "jp": "姿勢",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "precision",
+      "jp": "精度",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "skim",
+      "jp": "ざっと目を通す",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "meritorious",
+      "jp": "功績のある",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "acknowledge",
+      "jp": "認める",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "decree",
+      "jp": "法令",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "cadet",
+      "jp": "士官候補生",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "heft",
+      "jp": "重さ",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "batshit",
+      "jp": "狂ってる",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "grinds out",
+      "jp": "削り出す",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "hardwood",
+      "jp": "広葉樹",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "wince",
+      "jp": "顔をしかめる",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "vicinity",
+      "jp": "近傍",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "lunge",
+      "jp": "ランジ",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "thrice",
+      "jp": "3回",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "shrewd",
+      "jp": "抜け目のない",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "vermin",
+      "jp": "害虫",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "allegory",
+      "jp": "アレゴリー",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "retrieve",
+      "jp": "取得する",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "tome",
+      "jp": "書物",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "collarbone",
+      "jp": "鎖骨",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "hidden sheath",
+      "jp": "隠し鞘",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "sewn",
+      "jp": "縫製",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "diagonally",
+      "jp": "斜めに",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "rib cage",
+      "jp": "胸郭",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "igenious",
+      "jp": "独創的",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "deem",
+      "jp": "とみなす",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    },
+    {
+      "id": "",
+      "en": "devious",
+      "jp": "狡猾な",
+      "pos": "",
+      "exampleEn": "",
+      "exampleJp": ""
+    }
+  ]
+}
