@@ -8,7 +8,7 @@
     :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
     body { margin: 0; padding: 16px; }
     .wrap { max-width: 720px; margin: 0 auto; }
-    .card { border: 1px solid #ddd; border-radius: 16px; padding: 16px; }
+    .card { border: 1px solid #ddd; border-radius: 16px; padding: 16px; transition: background 0.3s, border-color 0.3s, box-shadow 0.3s; }
     .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
     .spacer { height: 12px; }
     .big { font-size: 22px; font-weight: 700; line-height: 1.3; }
@@ -33,6 +33,7 @@
       background: transparent;
       position: relative;
       z-index: 2;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
     .ghost {
       position: absolute;
@@ -46,10 +47,10 @@
       pointer-events: none;
       z-index: 1;
     }
-    .ghost .typed { color: transparent; } /* typed部分は透明（入力欄で見える） */
+    .ghost .typed { color: transparent; }
     .ghost .rest { color: #aaa; }
 
-    button { font-size: 16px; padding: 10px 14px; border-radius: 12px; border: 1px solid #bbb; background: #fff; }
+    button { font-size: 16px; padding: 10px 14px; border-radius: 12px; border: 1px solid #bbb; background: #fff; cursor: pointer; }
     button.primary { border-color: #000; }
     button:disabled { opacity: 0.5; }
     .status { min-height: 24px; font-weight: 600; }
@@ -57,17 +58,145 @@
     .ng { color: #c33; }
     .muted { color: #666; font-size: 13px; }
     .pill { border: 1px solid #ddd; padding: 4px 10px; border-radius: 999px; font-size: 13px; color: #444; }
+
+    /* ---- Shake ---- */
     .shake { animation: shake 120ms linear 1; }
     @keyframes shake {
-      0% { transform: translateX(0); }
-      25% { transform: translateX(-2px); }
-      50% { transform: translateX(2px); }
-      75% { transform: translateX(-2px); }
+      0%   { transform: translateX(0); }
+      25%  { transform: translateX(-2px); }
+      50%  { transform: translateX(2px); }
+      75%  { transform: translateX(-2px); }
       100% { transform: translateX(0); }
+    }
+
+    /* ---- Card flash ---- */
+    .card.flash-ok {
+      animation: cardFlashOk 0.55s ease forwards;
+    }
+    .card.flash-ng {
+      animation: cardFlashNg 0.45s ease forwards;
+    }
+    @keyframes cardFlashOk {
+      0%   { background: #fff; border-color: #ddd; box-shadow: none; }
+      35%  { background: #d4f5e8; border-color: #28a745; box-shadow: 0 0 24px rgba(40,167,69,0.35); }
+      100% { background: #fff; border-color: #ddd; box-shadow: none; }
+    }
+    @keyframes cardFlashNg {
+      0%   { background: #fff; border-color: #ddd; box-shadow: none; }
+      35%  { background: #fde8e8; border-color: #dc3545; box-shadow: 0 0 18px rgba(220,53,69,0.3); }
+      100% { background: #fff; border-color: #ddd; box-shadow: none; }
+    }
+
+    /* ---- Slide-in for next question ---- */
+    .slide-in {
+      animation: slideIn 0.28s cubic-bezier(0.22,1,0.36,1);
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(24px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    /* ---- Score pill bounce ---- */
+    .pill-bounce {
+      animation: pillBounce 0.32s ease;
+    }
+    @keyframes pillBounce {
+      0%   { transform: scale(1); }
+      45%  { transform: scale(1.35); }
+      100% { transform: scale(1); }
+    }
+
+    /* ---- Combo display (fixed, top-right) ---- */
+    #comboDisplay {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #ff6b35;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.08);
+      opacity: 0;
+      transform: scale(0.6) translateY(-8px);
+      transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.34,1.56,0.64,1);
+      pointer-events: none;
+      z-index: 200;
+      white-space: nowrap;
+    }
+    #comboDisplay.visible {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+    #comboDisplay.level2 { color: #9c27b0; font-size: 26px; }
+    #comboDisplay.level3 { color: #e91e63; font-size: 32px; }
+    #comboDisplay.level4 { color: #f44336; font-size: 38px; text-shadow: 2px 2px 0 rgba(0,0,0,0.12); }
+
+    /* ---- Praise float popup ---- */
+    .praise-popup {
+      position: fixed;
+      font-size: 20px;
+      font-weight: 800;
+      color: #00897b;
+      pointer-events: none;
+      z-index: 300;
+      animation: praiseFloat 0.9s ease forwards;
+    }
+    @keyframes praiseFloat {
+      0%   { opacity: 1; transform: translateY(0) scale(1); }
+      60%  { opacity: 0.9; transform: translateY(-28px) scale(1.15); }
+      100% { opacity: 0; transform: translateY(-52px) scale(1.2); }
+    }
+
+    /* ---- Streak bar ---- */
+    #streakBarWrap {
+      height: 5px;
+      background: #f0f0f0;
+      border-radius: 3px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    #streakBar {
+      height: 100%;
+      width: 0%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #ff6b35 0%, #ffd93d 40%, #6bcb77 70%, #4d96ff 100%);
+      transition: width 0.6s cubic-bezier(0.22,1,0.36,1);
+    }
+
+    /* ---- Mute button ---- */
+    #muteBtn {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 18px;
+      padding: 0;
+      border: 1px solid #ddd;
+      background: rgba(255,255,255,0.92);
+      cursor: pointer;
+      z-index: 150;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      line-height: 1;
+    }
+    #muteBtn:hover { background: #f5f5f5; }
+
+    /* ---- Confetti canvas ---- */
+    #confettiCanvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 9999;
     }
   </style>
 </head>
 <body>
+  <canvas id="confettiCanvas"></canvas>
+  <div id="comboDisplay"></div>
+  <button id="muteBtn" title="サウンドON/OFF">🔊</button>
+
   <div class="wrap">
     <div class="sheetRow">
       <button id="switchSheetBtn">&#x30B7;&#x30FC;&#x30C8;&#x306E;&#x5207;&#x308A;&#x66FF;&#x3048;</button>
@@ -84,49 +213,49 @@
     </div>
 
     <div id="quizView">
-      <div class="card">
-      <div class="row">
-        <div class="pill" id="posPill">品詞: -</div>
-        <div class="pill" id="counterPill">0 / 0</div>
-        <div class="pill" id="scorePill">✅0 / ❌0</div>
+      <div class="card" id="quizCard">
+        <div id="streakBarWrap"><div id="streakBar"></div></div>
+
+        <div class="row">
+          <div class="pill" id="posPill">品詞: -</div>
+          <div class="pill" id="counterPill">0 / 0</div>
+          <div class="pill" id="scorePill">✅0 / ❌0</div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="titleRow">
+          <div class="big" id="jpText">読み込み中...</div>
+          <div class="status statusInline" id="statusText"></div>
+        </div>
+        <div class="spacer"></div>
+
+        <div class="hint" id="hintText"></div>
+        <div class="spacer"></div>
+
+        <div class="inputWrap" id="inputWrap">
+          <div class="ghost" id="ghostText" aria-hidden="true"></div>
+          <input id="answerInput" type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false"
+                 placeholder="英語を入力してEnter（または「判定」）" />
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="row">
+          <button class="primary" id="checkBtn">判定</button>
+          <button id="confirmBtn">答えを表示(失敗なし)</button>
+          <button id="hintBtn">ヒントを表示</button>
+          <button id="exampleBtn">例文を表示</button>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="example hidden" id="exampleText"></div>
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+
+        <div class="muted" id="debugText"></div>
       </div>
-
-      <div class="spacer"></div>
-
-      <div class="titleRow">
-        <div class="big" id="jpText">読み込み中...</div>
-        <div class="status statusInline" id="statusText"></div>
-      </div>
-      <div class="spacer"></div>
-
-      <div class="hint" id="hintText"></div>
-      <div class="spacer"></div>
-
-
-      <div class="inputWrap" id="inputWrap">
-        <div class="ghost" id="ghostText" aria-hidden="true"></div>
-        <input id="answerInput" type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false"
-               placeholder="英語を入力してEnter（または「判定」）" />
-      </div>
-
-      <div class="spacer"></div>
-
-      <div class="row">
-        <button class="primary" id="checkBtn">判定</button>
-        <button id="confirmBtn">答えを表示(失敗なし)</button>
-        <button id="hintBtn">ヒントを表示</button>
-        <button id="exampleBtn">例文を表示</button>
-      </div>
-
-      <div class="spacer"></div>
-
-      <div class="example hidden" id="exampleText"></div>
-      <div class="spacer"></div>
-
-      <div class="spacer"></div>
-
-      <div class="muted" id="debugText"></div>
-    </div>
     </div>
 
     <div class="spacer"></div>
@@ -156,7 +285,6 @@ function buildSheetCsvUrl(gid) {
 function buildStaticSheetUrl(gid) {
   return `${STATIC_SHEET_DIR}/${normalizeGid(gid)}.json`;
 }
-
 
 async function loadCSV(url) {
   const res = await fetch(url, { cache: "default" });
@@ -337,11 +465,15 @@ const ui = {
   sheetList: document.getElementById("sheetList"),
   closeSheetListBtn: document.getElementById("closeSheetListBtn"),
   quizView: document.getElementById("quizView"),
+  quizCard: document.getElementById("quizCard"),
   exampleBtn: document.getElementById("exampleBtn"),
   checkBtn: document.getElementById("checkBtn"),
   confirmBtn: document.getElementById("confirmBtn"),
   counterPill: document.getElementById("counterPill"),
   scorePill: document.getElementById("scorePill"),
+  comboDisplay: document.getElementById("comboDisplay"),
+  streakBar: document.getElementById("streakBar"),
+  confettiCanvas: document.getElementById("confettiCanvas"),
 };
 window.ui = ui;
 
@@ -358,14 +490,190 @@ const CONFIRM_LABEL = "答えを表示(失敗なし)";
 const NEXT_LABEL = "次の単語";
 
 // hint/reveal state
-let revealMode = false;     // hintBtnが「\u7b54\u3048\u3092\u8868\u793a」状態か
-let traceMode = false;      // なぞりモード中か
-let traceTarget = "";       // 正解（表示用）
+let revealMode = false;
+let traceMode = false;
+let traceTarget = "";
 let traceTyped = "";
-let exampleVisible = false;        // いまなぞった文字列
+let exampleVisible = false;
 let isComposing = false;
 let confirmRevealed = false;
 
+// ---- Effect state ----
+let combo = 0;
+let soundEnabled = true;
+let audioCtx = null;
+let comboHideTimer = null;
+
+const PRAISE_NORMAL = ["よし！", "ナイス！", "いいね！", "正解！", "完璧！", "さすが！"];
+const PRAISE_COMBO = {
+  3:  ["3連続！🔥", "コンボ！🔥", "ノリノリ！🔥"],
+  5:  ["5連続！⚡", "すごい！⚡", "止まらない！⚡"],
+  7:  ["7連続！🌟", "天才！🌟", "最高！🌟"],
+  10: ["10連続！👑", "圧倒的！👑", "レジェンド！👑"],
+  15: ["15連続！💎", "無双！💎"],
+  20: ["20連続！🌈", "神業！🌈"],
+};
+
+// ---- Audio ----
+function getAudioCtx() {
+  if (!audioCtx) {
+    try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }
+    catch(e) { return null; }
+  }
+  if (audioCtx.state === "suspended") audioCtx.resume();
+  return audioCtx;
+}
+
+function playTone(freq, startTime, duration, gain, ctx, type = "sine") {
+  const osc = ctx.createOscillator();
+  const g = ctx.createGain();
+  osc.type = type;
+  osc.frequency.setValueAtTime(freq, startTime);
+  g.gain.setValueAtTime(gain, startTime);
+  g.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+  osc.connect(g);
+  g.connect(ctx.destination);
+  osc.start(startTime);
+  osc.stop(startTime + duration);
+}
+
+function playSound(type) {
+  if (!soundEnabled) return;
+  const ctx = getAudioCtx();
+  if (!ctx) return;
+  const t = ctx.currentTime;
+
+  if (type === "correct") {
+    playTone(523.25, t,       0.12, 0.25, ctx); // C5
+    playTone(659.25, t+0.10, 0.14, 0.25, ctx); // E5
+    playTone(783.99, t+0.20, 0.20, 0.22, ctx); // G5
+  } else if (type === "combo") {
+    playTone(523.25, t,       0.10, 0.25, ctx);
+    playTone(659.25, t+0.08, 0.10, 0.25, ctx);
+    playTone(783.99, t+0.16, 0.10, 0.25, ctx);
+    playTone(1046.5, t+0.24, 0.25, 0.25, ctx);
+  } else if (type === "bigcombo") {
+    playTone(523.25, t,       0.10, 0.25, ctx);
+    playTone(659.25, t+0.07, 0.10, 0.25, ctx);
+    playTone(783.99, t+0.14, 0.10, 0.25, ctx);
+    playTone(1046.5, t+0.21, 0.10, 0.25, ctx);
+    playTone(1318.5, t+0.28, 0.35, 0.28, ctx);
+  } else if (type === "wrong") {
+    playTone(220, t,      0.08, 0.20, ctx, "sawtooth");
+    playTone(180, t+0.09, 0.18, 0.18, ctx, "sawtooth");
+  }
+}
+
+// ---- Confetti ----
+let confettiAnim = null;
+function launchConfetti(count = 50) {
+  const canvas = ui.confettiCanvas;
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const colors = ["#ff6b6b","#ffd93d","#6bcb77","#4d96ff","#c77dff","#ff922b","#20c997"];
+  const particles = Array.from({length: count}, () => ({
+    x: canvas.width * (0.2 + Math.random() * 0.6),
+    y: -10 - Math.random() * 60,
+    w: 7 + Math.random() * 8,
+    h: 4 + Math.random() * 5,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    rot: Math.random() * Math.PI * 2,
+    rotV: (Math.random() - 0.5) * 0.22,
+    vx: (Math.random() - 0.5) * 4,
+    vy: 2 + Math.random() * 3.5,
+    alpha: 1,
+  }));
+
+  if (confettiAnim) cancelAnimationFrame(confettiAnim);
+  let frame = 0;
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let alive = false;
+    for (const p of particles) {
+      if (p.y > canvas.height + 20) continue;
+      alive = true;
+      p.x  += p.vx;
+      p.y  += p.vy;
+      p.vy += 0.07;
+      p.rot += p.rotV;
+      if (frame > 60) p.alpha = Math.max(0, p.alpha - 0.015);
+      ctx.save();
+      ctx.globalAlpha = p.alpha;
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+      ctx.restore();
+    }
+    frame++;
+    if (alive && frame < 200) {
+      confettiAnim = requestAnimationFrame(draw);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      confettiAnim = null;
+    }
+  }
+  draw();
+}
+
+// ---- Praise popup ----
+function showPraise(text) {
+  const el = document.createElement("div");
+  el.className = "praise-popup";
+  el.textContent = text;
+  // position near the status text
+  const rect = ui.statusText.getBoundingClientRect();
+  el.style.left = (rect.left + window.scrollX) + "px";
+  el.style.top  = (rect.top  + window.scrollY - 10) + "px";
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 950);
+}
+
+function getPraiseText(c) {
+  // find highest threshold <= c
+  let words = PRAISE_NORMAL;
+  for (const threshold of [20, 15, 10, 7, 5, 3]) {
+    if (c >= threshold) { words = PRAISE_COMBO[threshold]; break; }
+  }
+  return words[Math.floor(Math.random() * words.length)];
+}
+
+// ---- Combo display ----
+function showComboDisplay(c) {
+  clearTimeout(comboHideTimer);
+  const el = ui.comboDisplay;
+  el.className = "";
+  el.textContent = getPraiseText(c);
+  if      (c >= 10) el.classList.add("level4");
+  else if (c >= 7)  el.classList.add("level3");
+  else if (c >= 5)  el.classList.add("level2");
+
+  void el.offsetWidth; // reflow to restart transition
+  el.classList.add("visible");
+  comboHideTimer = setTimeout(() => {
+    el.classList.remove("visible");
+  }, 1800);
+}
+
+// ---- Streak bar ----
+function updateStreakBar() {
+  // bar = combo / 20 * 100%, capped at 100%
+  const pct = Math.min(100, combo * 5);
+  ui.streakBar.style.width = pct + "%";
+}
+
+// ---- Card flash ----
+function flashCard(type) {
+  const card = ui.quizCard;
+  card.classList.remove("flash-ok", "flash-ng");
+  void card.offsetWidth;
+  card.classList.add(type === "ok" ? "flash-ok" : "flash-ng");
+}
+
+// ---- normalizeGid ----
 function normalizeGid(value) {
   const m = String(value || "").match(/\d+/);
   return m ? m[0] : "";
@@ -379,9 +687,7 @@ function setView(mode) {
 
 function setActiveSheet(gid, name) {
   activeGid = normalizeGid(gid || DEFAULT_GID);
-  if (activeGid === LIST_GID) {
-    activeGid = DEFAULT_GID;
-  }
+  if (activeGid === LIST_GID) activeGid = DEFAULT_GID;
   activeName = String(name || "-");
   localStorage.setItem(STORAGE_GID_KEY, activeGid);
   localStorage.setItem(STORAGE_NAME_KEY, activeName);
@@ -391,10 +697,7 @@ function setActiveSheet(gid, name) {
 function loadActiveSheetFromStorage() {
   let gid = normalizeGid(localStorage.getItem(STORAGE_GID_KEY) || DEFAULT_GID);
   let name = localStorage.getItem(STORAGE_NAME_KEY) || "-";
-  if (gid === LIST_GID) {
-    gid = DEFAULT_GID;
-    name = "-";
-  }
+  if (gid === LIST_GID) { gid = DEFAULT_GID; name = "-"; }
   setActiveSheet(gid, name);
 }
 
@@ -433,10 +736,7 @@ function renderSheetList(list) {
 
 async function loadItemsForActiveSheet() {
   let gid = activeGid || DEFAULT_GID;
-  if (!gid) {
-    setActiveSheet(DEFAULT_GID, activeName);
-    gid = DEFAULT_GID;
-  }
+  if (!gid) { setActiveSheet(DEFAULT_GID, activeName); gid = DEFAULT_GID; }
 
   let data = await loadSheetData(gid);
   if (data.items.length === 0 && gid !== DEFAULT_GID) {
@@ -445,9 +745,7 @@ async function loadItemsForActiveSheet() {
     data = await loadSheetData(gid);
   }
 
-  if (data.name) {
-    setActiveSheet(gid, data.name);
-  }
+  if (data.name) setActiveSheet(gid, data.name);
   items = data.items;
   shuffleInPlace(items);
 
@@ -455,13 +753,12 @@ async function loadItemsForActiveSheet() {
 
   idx = 0;
   asked = 1;
-  ok = 0;
-  ng = 0;
+  ok = 0; ng = 0;
+  combo = 0;
+  updateStreakBar();
   current = items[idx];
   ui.jpText.textContent = current.jp;
-  if (ui.exampleText) {
-    ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
-  }
+  if (ui.exampleText) ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
   ui.posPill.textContent = `品詞: ${current.pos || "-"}`;
   setExampleVisible(false);
   updatePills();
@@ -469,43 +766,23 @@ async function loadItemsForActiveSheet() {
 }
 
 function normalizeEn(s) {
-  return String(s)
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, " ")
-    .replace(/[’‘]/g, "'");
+  return String(s).toLowerCase().trim().replace(/\s+/g, " ").replace(/['']/g, "'");
 }
 
 function hasPinyinMarks(s) {
   return /[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]/.test(String(s));
 }
 
-
 function normalizePinyin(s) {
-  return String(s)
-    .toLowerCase()
-    .trim()
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .replace(/ü/g, "u")
-    .replace(/v/g, "u")
-    .replace(/\s+/g, " ");
+  return String(s).toLowerCase().trim().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ü/g, "u").replace(/v/g, "u").replace(/\s+/g, " ");
 }
-
 
 function normalizeAnswerPair(userRaw, answerRaw) {
   if (hasPinyinMarks(answerRaw)) {
-    return {
-      user: normalizePinyin(userRaw),
-      answer: normalizePinyin(answerRaw),
-    };
+    return { user: normalizePinyin(userRaw), answer: normalizePinyin(answerRaw) };
   }
-  return {
-    user: normalizeEn(userRaw),
-    answer: normalizeEn(answerRaw),
-  };
+  return { user: normalizeEn(userRaw), answer: normalizeEn(answerRaw) };
 }
-
 
 function setStatus(msg, cls) {
   ui.statusText.className = "status " + (cls || "");
@@ -514,9 +791,14 @@ function setStatus(msg, cls) {
 function setHint(text) { ui.hintText.textContent = text || ""; }
 function setDebug(text) { ui.debugText.textContent = text || ""; }
 
-function updatePills() {
+function updatePills(okBounce, ngBounce) {
   ui.counterPill.textContent = `${asked} / ${items.length}`;
   ui.scorePill.textContent = `✅${ok} / ❌${ng}`;
+  if (okBounce || ngBounce) {
+    ui.scorePill.classList.remove("pill-bounce");
+    void ui.scorePill.offsetWidth;
+    ui.scorePill.classList.add("pill-bounce");
+  }
 }
 
 function escapeRegExp(s) {
@@ -527,10 +809,8 @@ function maskExample(exampleRaw, answerRaw) {
   const example = String(exampleRaw || "").trim();
   const answer = String(answerRaw || "").trim();
   if (!example || !answer) return example;
-
   const pattern = new RegExp(escapeRegExp(answer), "ig");
-  const replaced = example.replace(pattern, (m) => m.replace(/[A-Za-z]/g, "_"));
-  return replaced;
+  return example.replace(pattern, (m) => m.replace(/[A-Za-z]/g, "_"));
 }
 
 function makeHint(answerRaw) {
@@ -559,7 +839,7 @@ function resetHintAndTraceUI() {
   ui.hintBtn.textContent = "ヒントを表示";
   if (ui.confirmBtn) ui.confirmBtn.textContent = CONFIRM_LABEL;
   setHint("");
-  setGhost(""); // ghost消す
+  setGhost("");
   ui.checkBtn.disabled = false;
   ui.answerInput.value = "";
   ui.answerInput.readOnly = false;
@@ -567,11 +847,7 @@ function resetHintAndTraceUI() {
 }
 
 function setGhost(target) {
-  if (!target) {
-    ui.ghostText.innerHTML = "";
-    return;
-  }
-  // typedは透明、restだけ灰色で見せる
+  if (!target) { ui.ghostText.innerHTML = ""; return; }
   const typed = escapeHtml(traceTyped);
   const rest = escapeHtml(target.slice(traceTyped.length));
   ui.ghostText.innerHTML = `<span class="typed">${typed}</span><span class="rest">${rest}</span>`;
@@ -584,11 +860,8 @@ function setExampleVisible(visible) {
   ui.exampleBtn.textContent = visible ? "例文を隠す" : "例文を表示";
 }
 
-
 function escapeHtml(s) {
-  return String(s).replace(/[&<>"']/g, m => ({
-    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-  }[m]));
+  return String(s).replace(/[&<>"']/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
 }
 
 function shuffleInPlace(list) {
@@ -618,12 +891,16 @@ function nextQuestion() {
   asked++;
   idx = pickNextIndex();
   current = items[idx];
+
+  // slide animation on question text
+  ui.jpText.classList.remove("slide-in");
+  void ui.jpText.offsetWidth;
+  ui.jpText.classList.add("slide-in");
+
   ui.jpText.textContent = current.jp;
   ui.posPill.textContent = `品詞: ${current.pos || "-"}`;
   resetHintAndTraceUI();
-  if (ui.exampleText) {
-    ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
-  }
+  if (ui.exampleText) ui.exampleText.textContent = maskExample(current.exampleEn, current.en);
   setStatus("");
   setDebug("");
   updatePills();
@@ -631,20 +908,49 @@ function nextQuestion() {
 }
 
 function markWrong(reason) {
+  combo = 0;
   ng++;
   current.wrongCount = (current.wrongCount || 0) + 1;
+
+  playSound("wrong");
+  flashCard("ng");
+  updateStreakBar();
+
   setStatus(reason || "ミス", "ng");
-  updatePills();
+  updatePills(false, true);
 }
+
 function markCorrect() {
+  combo++;
   ok++;
+
+  // Sound: escalate with combo
+  if      (combo >= 10) playSound("bigcombo");
+  else if (combo >= 3)  playSound("combo");
+  else                  playSound("correct");
+
+  flashCard("ok");
+  updateStreakBar();
+
+  // Confetti: always on big combo, occasionally otherwise
+  const confettiCount = combo >= 10 ? 120 : combo >= 5 ? 80 : combo >= 3 ? 55 : 30;
+  if (combo >= 3 || Math.random() < 0.35) {
+    launchConfetti(confettiCount);
+  }
+
+  // Praise popup
+  showPraise(getPraiseText(combo));
+
+  // Combo display
+  if (combo >= 3) showComboDisplay(combo);
+
   setStatus("正解！", "ok");
-  updatePills();
+  updatePills(true, false);
 }
 
 function checkAnswer() {
   if (confirmRevealed) return;
-  if (traceMode || isComposing) return; // なぞり中/変換中は判定しない
+  if (traceMode || isComposing) return;
   const normalized = normalizeAnswerPair(ui.answerInput.value, current.en);
   const user = normalized.user;
   const ans = normalized.answer;
@@ -652,10 +958,14 @@ function checkAnswer() {
 
   if (user === ans) {
     markCorrect();
-    setTimeout(nextQuestion, NEXT_DELAY_MS); // テンポ優先：短く
+    setTimeout(nextQuestion, NEXT_DELAY_MS);
   } else {
+    // break combo on typing wrong
+    combo = 0;
+    updateStreakBar();
+    playSound("wrong");
+    flashCard("ng");
     setStatus("違います（もう一回）", "ng");
-    // 将来：to bear vs bear の「惜しい」判定など
   }
 }
 
@@ -669,7 +979,7 @@ function enterTraceMode() {
   traceTyped = "";
   setGhost(traceTarget);
   setStatus("答えをなぞってください（ミス扱い）", "ng");
-  setDebug(""); // ここは静かに
+  setDebug("");
   ui.answerInput.focus();
 }
 
@@ -679,13 +989,11 @@ function flashWrongKey() {
   ui.inputWrap.classList.add("shake");
 }
 
-// iOS含め安定させるため beforeinput を優先で使う
 function onBeforeInput(ev) {
   if (!traceMode) return;
   if (hasPinyinMarks(current.en)) return;
   if (isComposing || ev.isComposing) return;
 
-  // ペーストなどを防ぐ
   const t = ev.inputType || "";
   if (t.startsWith("delete") || t === "insertFromPaste" || t === "insertFromDrop") {
     ev.preventDefault();
@@ -698,7 +1006,6 @@ function onBeforeInput(ev) {
     return;
   }
 
-  // 1文字ずつ処理（スマホで複数入るケースに備える）
   let remaining = data;
   let newTyped = traceTyped;
 
@@ -706,11 +1013,9 @@ function onBeforeInput(ev) {
     const expected = traceTarget[newTyped.length];
     if (expected == null) break;
 
-    // 正規化は「なぞり」ではしない（そのまま合わせる）
     if (ch === expected) {
       newTyped += ch;
     } else {
-      // 間違い：入力させない
       flashWrongKey();
       ev.preventDefault();
       ui.answerInput.value = newTyped;
@@ -720,32 +1025,26 @@ function onBeforeInput(ev) {
     }
   }
 
-  // ここまで全部正しい → 反映
   ev.preventDefault();
   traceTyped = newTyped;
   ui.answerInput.value = traceTyped;
   setGhost(traceTarget);
 
   if (traceTyped.length >= traceTarget.length) {
-    // 完走したら即次へ
     setStatus("OK（次へ）", "ok");
     setTimeout(nextQuestion, NEXT_DELAY_MS);
   }
 }
 
 function onKeyDownFallback(ev) {
-  // beforeinput非対応環境の最低限フォールバック
   if (!traceMode) return;
-  // EnterやBackspaceは無効化
   if (ev.key === "Enter" || ev.key === "Backspace") {
     ev.preventDefault();
     return;
   }
 }
 
-function onCompositionStart() {
-  isComposing = true;
-}
+function onCompositionStart() { isComposing = true; }
 
 function onCompositionEnd() {
   isComposing = false;
@@ -774,18 +1073,15 @@ function onCompositionEnd() {
   }
 }
 
-
 /** ---- Hint / Reveal button ---- **/
 function onHintButton() {
   if (confirmRevealed) return;
   if (!revealMode) {
-    // 1回目：ヒント表示 → ボタンが「\u7b54\u3048\u3092\u8868\u793a」に変化
     revealMode = true;
     ui.hintBtn.textContent = "答えを表示";
     setHint(makeHint(current.en));
     setStatus("", "");
   } else {
-    // 2回目：「\u7b54\u3048\u3092\u8868\u793a」→ なぞりモードへ（ミス扱い）
     markWrong("答えを見ました（ミス扱い）");
     enterTraceMode();
   }
@@ -793,10 +1089,7 @@ function onHintButton() {
 
 /** ---- Confirm (show answer) ---- **/
 function onConfirmButton() {
-  if (confirmRevealed) {
-    nextQuestion();
-    return;
-  }
+  if (confirmRevealed) { nextQuestion(); return; }
   confirmRevealed = true;
   revealMode = false;
   traceMode = false;
@@ -815,13 +1108,18 @@ function onConfirmButton() {
   ui.answerInput.focus();
 }
 
+/** ---- Mute button ---- **/
+document.getElementById("muteBtn").addEventListener("click", () => {
+  soundEnabled = !soundEnabled;
+  document.getElementById("muteBtn").textContent = soundEnabled ? "🔊" : "🔇";
+});
+
 /** ---------- Boot ---------- **/
 (async function boot() {
   try {
     loadActiveSheetFromStorage();
     await loadItemsForActiveSheet();
   } catch (e) {
-
     ui.jpText.textContent = "読み込みに失敗しました";
     setStatus(String(e), "ng");
   }
